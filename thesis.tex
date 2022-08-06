@@ -193,7 +193,12 @@ BoldItalicFont=*-BoldItalic]
     \renewcommand{\ShowFrameColor}{\color{black}}
     \renewcommand{\ShowFrameLinethickness}{.5pt}}{}
 
-
+\usepackage[
+        firstpageonly,%
+        fontsize=0.06\paperwidth,%
+        text={INITIAL SUBMISSION FOR\\[0.5em] EXAMINATION PURPOSE},%
+        colorspec=0.88,%
+    ]{draftwatermark}
 
 % % Noting and drafting packages
 % \usepackage[% 
@@ -521,7 +526,6 @@ BoldItalicFont=*-BoldItalic]
 % Some content
 % \clearpage
 
-
 % Linguistic trees
 \usepackage[linguistics, edges]{forest}
 % Easy extra edges
@@ -650,7 +654,7 @@ BoldItalicFont=*-BoldItalic]
 \include{contents/1-introduction}
 \include{contents/2-background}
 \include{contents/3-methodology}
-\include{contents/4-data}
+% \include{contents/4-data}
 \include{contents/5-diffusion}
 \include{contents/6-names}
 \include{contents/7-language}
