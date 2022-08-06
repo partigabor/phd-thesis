@@ -1,0 +1,45 @@
+
+\begin{folio}{Pimento}\label{fol:pimento}
+\begin{forest}
+for tree={align=center,calign=center}
+[, l sep=0
+[\parbox{0.3\textwidth}{\centering \hspace{-1.25em} \textcolor{OliveGreen}{\rightarrow} \textit{pimento} \\ English \\ {\small`allspice; sweet pepper'}}, no edge, baseline, name=0, tier=0, for tree={l sep=25,s sep=2mm}
+	[\parbox{0.3\textwidth}{\centering \textit{pimenta} \\ Portuguese \\ {\small`allspice; sweet pepper; black pepper'}}, name=1, tier=1]
+	[, no edge, l sep=100, tier=1
+	    [\parbox{0.3\textwidth}{\centering \textit{pigmenta} \\ Late Latin \\ {\small`plant juice; food seasoning; condiment; spices; perfumes'} {\small(plural of \textit{pigmentum})}}, no edge, name=4, tier=3
+			[\parbox{0.3\textwidth}{\centering \textit{pigmentum} \\ Latin \\ {\small`colour; paint; ointment; drug'} {\small(from \textit{pingō} `to paint' + \textit{-mentum} `instrument')}}, name=5, tier=4]]]
+	[\parbox{0.3\textwidth}{\centering \textit{pimiento} \\ Spanish \\ {\small`hot and sweet pepper; formerly also black pepper; pepper plant of both kinds' (earlier \textit{pimienta})}}, edge=dotted, name=2, tier=1]]
+% 		[\parbox{0.3\textwidth}{\centering \textit{pimienta} \\ Spanish \\ {\small`black pepper; peppercorn; ground pepper'}}, name=3, tier=2]
+[c. 1660, no edge, tier=0
+	[XV | 1495, no edge, tier=1]
+% 			[XIII, no edge, tier=2
+				[IX, no edge, tier=3
+					[IX, no edge, tier=4
+]]]
+[\href{https://www.oed.com/view/Entry/143999?}{OED} \\\href{https://www.etymonline.com/word/pimento\#etymonline_v_14997}{OE}, no edge, tier=0
+	[\href{https://www.oed.com/view/Entry/143999?}{OED}
+	\\\href{https://www.oed.com/view/Entry/144002?}{OED} \\\href{https://dle.rae.es/pimiento?m=form}{DLE}, no edge, tier=1]
+% 			[\href{https://dle.rae.es/pimienta?m=form}{DLE}, no edge, tier=2
+				[\href{http://www.perseus.tufts.edu/hopper/text?doc=Perseus\%3Atext\%3A1999.04.0059\%3Aentry\%3Dpigmentum}{LS}, no edge, tier=3
+			    	[\href{http://www.perseus.tufts.edu/hopper/text?doc=Perseus\%3Atext\%3A1999.04.0059\%3Aentry\%3Dpigmentum}{LS}, no edge, tier=4
+]]]
+]
+\draw[-] (4.north) to (1.south);
+\draw[-] (4.north) to (2.south);
+\end{forest}
+
+\bigskip
+
+\raggedright
+\renewcommand{\arraystretch}{0.75}
+\begin{tabular}{@{}ll@{}}
+\tikz[baseline]\draw[dotted](0,0.5ex)--(0.75,0.5ex); & \footnotesize influenced\\
+\tikz[baseline]\draw[dashed](0,0.5ex)--(0.75,0.5ex); & \footnotesize doubtful\\
+\tikz[baseline]\draw(0,0.5ex)--(0.75,0.5ex); & \footnotesize descended or borrowed\\
+\textcolor{OliveGreen}{\rightarrow} & \footnotesize loanword\\
+\end{tabular}
+
+\bigskip
+\raggedright
+Sources: \gls{OED}; \textcite[495]{corominas_breve_1987}; \textcite[415]{gomez_de_silva_elseviers_1985}.
+\end{folio}

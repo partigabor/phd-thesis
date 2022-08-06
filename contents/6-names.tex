@@ -1,0 +1,355 @@
+\chapter{The Names of Spices}
+\label{ch:names}
+
+% Empirical Chapters
+% Discuss and present your findings in a factual way.
+% What are the results of your investigations?
+% How do the findings relate to previous studies?
+% Was there anything surprising or that didn’t work out as planned?
+% Are there any themes or categories that emerge from the data?
+
+N
+
+\section{Overview}
+
+% \setlength\intextsep{0pt}
+\begin{wrapfigure}{O}{0.33\textwidth}
+  \includegraphics[width=0.33\textwidth]{imgs/plots/languages_pie.pdf}
+\caption[The distribution of spice names across the three languages.]{The distribution of spice names across the three languages.}
+\label{fig:languages_pie}
+\end{wrapfigure}
+% \setlength\intextsep{14pt}
+
+As a result of the data collection set forth in \cref{ch:data}, the database now contains 369 spice names. Of these, 159 are in English, 88 are in Arabic, and 122 are in Chinese; \cref{fig:languages_pie} shows this distribution.
+The total number is the accumulation of the lengthy process of carefully compiling the nomenclature for the set of spices as defined at the beginning of the thesis, which consists of 25 different spices. The data collection was detailed in \cref{sec:data_collection}, and this chapter aims to showcase the many ways we can interpret, analyze, and visualize the data.
+
+\subsection{Challenges in Categorization}
+
+One of the most challenging parts of this project, is to chose a meaningful way to categorize spices and spice names. The design should make sense on multiple dimensions: botanically, historically, and maybe even gastronomically, but at all times keeping in mind the linguistic focus. The main goal is to assign a spice name to the appropriate product/material, which is correctly identified on a botanical level. This is not always straightforward, as some materials can have multiple botanical sources, one plant can yield multiple differently used plant products, and the same names can be used for different substances. We have already discussed the question of spice names vs. plant names in \cref{sec:plant_vs_spice}, but there are are several other issues.
+
+One problem arises from the fact that many terms can have a meaning on different levels of specificity, depending on context and intent. Spice words are rich in senses. For example, according to the \gls{PWN} \textit{black pepper} can be both a hypernym and a hyponym to \textit{pepper}, depending on if it refers to the plant, or the dried fruits with the husks on. In this specific case, \textit{black pepper\#2} and \textit{white pepper} are sister terms, but \textit{white pepper} is also a subordinate to \textit{black pepper\#1}. This situation is then further complicated with the fruit of the \textit{Capsicums}, that also have the name \textit{pepper}. Thus, it is not immediately clear if we should treat black and white pepper as two different spices, or two manifestations of the same spice. There are many other examples, where a term can be understood on different levels: as a plant, a family of similar plants, a specific spice, or a group of spices. In an everyday setting, lexical semantic hierarchies are not always adhered to, and people organize spices in their heads according to their own convictions. One author might mention white pepper under the heading black pepper on account of their biology (a botanically driven categorization), while another might separate them and discuss them as different spices based on their different uses (a culinary approach). As for the historian, mentioning white pepper might be just not at all important. The reasons for these variations are usually determined by what is the intention of the categorization, and who is the target behind the treatise. For us layman however, spice entities are most prominently structured by way of their names: the words are the handrails to cling to if we are not familiar with an item.
+
+% If one were to debate whether black pepper and white pepper are the same spice (or the opposite for that matter), we would need some gastronomical knowledge to make some arguments.
+
+Even more challenging for categorization, is when we are not sure which spices were meant under certain names in different times. Cinnamon and cassia are a great example for this, as we saw in \cref{sec:identity_cinnamon}. But, parallel to the question of identity, we also have seen that it does not always matter. Attitudes differ from place to place: while Europeans do sometimes differentiate, in China and the U.S. the concept of cinnamon is singular. For the analysis, I had to decide if I treat them as one item, or make a distinction. In a few cases, a spice name became obsolete and got ``lost'', meaning that it cannot be identified with certainty, and we have to guess what the name referred to based on botanical and historical data, and categorize accordingly; as it is the case with \textit{amomum}. The most extreme situation is when a spice goes extinct, as it happened to silphium in antiquity. At present, this thesis does not contain such items. In these cases, we need historical knowledge to say anything about the identity of said spices and where they belong in between the others.
+
+Our knowledge or lack thereof also determines the concept we have of a certain item. For example, most people who know that nutmeg and mace come from the same fruit of the same plant and from the same place will always connect the two in their heads, the two spices are literally inseparable (until harvest, of course). From historical records however, it is clear that the knowledge regarding these substances was spiked with misunderstandings and inaccuracies, even among people who were in the spice business. According to an anecdote, during the Dutch monopoly of the Banda islands, an officer back home have written an angry letter to the colony on the Spice islands, ordering them to plant more mace trees, because there was a higher demand for it than nutmeg --- a request that must have raised some eyebrows on the plantations. This shows that botanical organization is accessible to those with botanical knowledge.
+
+Lastly, we must also mention that the language and words we use for these materials also defines our understanding of them. Analyzable, descriptive names help us to identify certain materials, while loanwords with forgotten original meanings (cf. \textit{mace}) might not say much. For example, no Chinese would have the above misconception of mace, when faced with its name: \tc{肉豆蔻皮} \textit{roudoukoupi}, which means the `skin/cover of the nutmeg', which is what it actually is. On the converse, the Chinese initially confused some cardamoms and nutmeg (unrelated plants), simply because they were both round, and sourced from the same region. Today, both are \tc{豆蔻} \textit{doukou}, with modifiers attached to distinguish between them.
+
+Another point to make is the myriad of ``fake'' spices that feature especially in English. False peppers, false cardamoms, bastard cinnamon, and bastard saffron, are a reflection of historical economic attitudes, often pointing at the problem of adulteration. Names, such as \textit{true pepper} and \textit{true cinnamon} summon a sense of originality. This however, is highly subjective to a culture and language, after all, bastard cinnamon is just ``normal'' cinnamon for others, and false cardamoms are just cardamoms to those who have a different prototype for what is a cardamom. In a sense, it all boils down to translation, which can be arbitrary. Who decides if Chinese \tc{桂} \textit{gui} should be rendered \textit{cinnamon} or \textit{cassia} in English? 
+
+To avoid getting lost in the details of lengthy binomial names or botanical genera, I have opted to use a set of common names of the spices to be used for identification, under which the various spice names belong. These IDs are sometimes arbitrary (e.g.: all spicy, red, hot, chili peppers of the \textit{Capsicum} genus and their names go under ``chile''), but always clear cut and explained in the data chapter. I have therefore grouped some spices and spice names into larger categories, trying to find a smallest common denominator within the three languages. This only affects a few items: various false cardamoms in the \textit{Amomum} genus will be grouped under the umbrella term: false cardamom. One better way would have been to divide the categories on a purely botanical basis, but I prefer this solution to make this set of closely related spices more accessible to the reader and avoid these items to fritter away in the crowd. Also, they constitute a linguistics and conceptual category as well, using similar prototype words in all three languages in their names. Using common names as identifiers also facilitates for a linguistically driven comparison, and so the IDs are essentially the same as the set of spices determined earlier: 
+allspice, anise, asafoetida, black cardamom, caraway, cardamom, cassia, chile, cinnamon, clove, coriander, cumin, dill, false cardamom, fennel, fenugreek, ginger, long pepper, nutmeg, pepper, saffron, Sichuan pepper, star anise, turmeric, vanilla.
+
+\section{Stats and Figures: The Spices in Numbers}
+
+\subsubsection{Name Counts}
+
+On average, a spice has 14 names, where the max is 44 (chile), the min is 4 (fenugreek and mace). \Cref{fig:ids_top_and_bottom} show the top ten and the bottom ten spices that have the most and least names, respectively. This is a very good indicator of which spices are more complex in their nomenclature, and therefore which are the most ``problematic'' to untangle.
+
+\begin{figure}[!ht]
+	\centering
+	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_top_pie.pdf}}
+	\hfill
+	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_bottom_pie.pdf}}
+	\caption[]{}
+	\label{fig:ids_top_and_bottom}
+\end{figure}
+
+As we can see, spices that can boast many names include the chili pepper, Sichuan peppers, and false cardamoms. On the other hand, spices with the lowest number of names are presumably the most ``straightforward'' items, take for example cloves, or vanilla.
+
+Now let us look at the same charts deconstructed by language. 
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/ids_trio.pdf}
+	\caption[]{}
+	\label{fig:ids_top_and_bottom}
+\end{figure}
+
+
+
+\begin{figure}[!ht]
+	\centering
+  \subfloat[]{\includegraphics[width=0.33\linewidth]{imgs/plots/ids_top_en.pdf}}
+	\hfill
+	\subfloat[]{\includegraphics[width=0.33\linewidth]{imgs/plots/ids_top_ar.pdf}}
+	\hfill
+	\subfloat[]{\includegraphics[width=0.33\linewidth]{imgs/plots/ids_top_zh.pdf}}
+	\caption[]{}
+	\label{fig:ids_top_by_language}
+\end{figure}
+
+
+% Trivially, the more similar some spices are, the more confusing their nomenclature will get. The best example for this are the spices from the umbel family: cumin, caraway, anise, fennel, dill, and so on; little seed-like fruits that grow from the Mediterranean to Central Asia. The fascinating connections are most visible when examining them in multiple languages. % EXAMPLES 
+
+
+% According to the \gls{WN}, there are four senses to the noun \textit{pepper}. Two refers to \textit{Capsicums}, and two to ``true peppers''. Pepper\#1 in the plant lexical file, with synonyms of common pepper\#1, black pepper\#1, white pepper\#1, Madagascar pepper\#1, and Piper nigrum\#1 is defined as ``climber having dark red berries (peppercorns) when fully ripe; southern India and Sri Lanka; naturalized in northern Burma and Assam''. Its hyponym is pepper\#3, synonym of peppercorn\#1, with the definition ``pungent seasoning from the berry of the common pepper plant of East India; use whole or ground'', now we are in the food lexical file. This latter, has two hyponyms on its own: black pepper\#2 (``pepper that is ground from whole peppercorns with husks on'') and white pepper\#2 (``pepper ground from husked peppercorns'')
+
+
+% How to accomodate for the confusion in the past, semantic changes kurkum, saffron? They appear twice in both relevant categories! 
+
+
+
+
+
+\section{The Attestation of Spice Words}
+
+From the nearly 400 names, I have chosen a selected few that --- for lack of a better word --- I marked as ``default''. These are the names most people are familiar with, the most people search by, and the most prevalent in corpora. These are the names that act also as IDs in my dataset. 
+
+
+
+One of the most exciting parts of this thesis, is the data that was collected regarding dates of attestation. In other words, I tried to find out the earliest possible mentions for each spice, then combine this information in a way that enables us to see the diffusion of spices throughout the history of a language and culture. In essence, we could see the history of the spice trade in the words, how and when they arrived, which spice were the earliest recorded, and which ones make the latest additions to in our vocabularies and spice cabinets.
+
+
+
+
+and then have a bird's eye view of  at them altogether, to see how the set of spices spread to the speakers of these languages. In English, I had a relatively easy job, as the \gls{OED} is very rich in etymological information, full of quotations. 
+
+
+compare these dates in the different languages. This kind of information is a valuable indicator, as it shows the approximate times of the earliest 
+
+% CHILI BOOK
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/attestation_en.pdf}
+  \caption{}
+  \label{fig:set_en}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/attestation_ar.pdf}
+  \caption{}
+  \label{fig:set_ar}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/attestation_zh.pdf}
+  \caption{}
+  \label{fig:set_zh}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/attestation.pdf}
+  \caption{}
+  \label{fig:set_all}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/attestation_compact.pdf}
+  \caption{}
+  \label{fig:set_all}
+\end{figure}
+
+\section{The Analysis of Spice Nomenclature}
+
+This chapter will present the analysis on these spice names, and try to answer the main question: How do people name spices, specifically, new spices that they came into contact with? Immediately, we can think of two ways: languages either borrow, or conceive a name. But how does this naming process work exactly? What are the underlying mechanisms and critical factors that influence the naming, and how does the nomenclature reflect the contact situation? How does borrowing work, and how languages invent new names for novel materials and substances? In an attempt to give answers to these questions, I will take a bottom-up approach and look at examples from the data I collected to arrive to some conclusions.
+
+\subsection{Terminology}
+During the analysis, I will take into account the term's (a) analyzability, their (b) borrowed status, and inspect the ways spice terms are generated using (c) prototype words and distinguishing words.
+
+\subsubsection{Analizability}
+
+Analyzability of words is an idea from the \nth{20}-century philological movement and method \textit{Wörter und Sachen} (words and things in German), which had a big influence on linguistics and ethnography. Outlined by Hugo Schuchardt and based on the titular journal \textit{} started by Indo-Europeanist Rudolf Meringer in 1909, it proposed the close study of the etymology of words together with the artifacts/concepts \autocite{ortutay_magyar_1977}. 
+
+% A Wörter und Sachen ('Szavak és dolgok') a Hugo Schuchardt által kidolgozott, a nyelvészetre és a néprajzra mély hatással lévő módszer, a tárgyak és szavak kölcsönös kutatásának elve, eredetileg R. Meringer indoeurópai nyelvész 1909-ben indított folyóiratának címe.
+% A módszer lényege: a szavak vándorlásában (kölcsönszavak) nem elegendő pusztán csak a megfelelő korban működő és ható hangtörvényekre és esetleg a szó jelentésére támaszkodni, hanem a nyelvi tények tanulmányozásán kívül vizsgálni kell a szavaktól jelölt dolgokat és tárgyakat. Természetesen itt számolni kell még művelődéstörténeti tényezőkkel is.
+% A módszert Ferdinand Blumentritt, valamint Jankó János és Bátky Zsigmond is sikeresen használta fel. 
+
+% Wörter und Sachen
+
+% R. Meringer indoeurópai nyelvész 1909-ben megindított folyóirata, amelyben ő és munkatársai azt a módszert képviselték, hogy a szavak jelentésfejlődésének és eredetének kutatásánál a néprajz – a tárgyak, jelenségek, intézmények, szokások vizsgálatánál pedig a nyelvészet (elsősorban a szótörténet, etimológia) eredményeit figyelembe kell venni. A néprajzi tárgykutatás jelentőségét emelte ki Meringer akkor, amikor 1906-ban azt írta, hogy „Ohne Sachwissenschaft keine Sprachwissenschaft mehr!” (’Tárgyi tudomány nélkül nincs többé nyelvtudomány’). A Wörter und Sachen a tárgyak és szavak kölcsönös kutatásának elvét Jankó János és Bátky Zsigmond eredetmagyarázataiknál (halászat, építkezés) körültekintően alkalkazták. A Wörter und Sachen módszerével tanulságos eredményeket ért el újabban Balassa Iván: A magyar kukorica (Bp., 1960). A Wörter und Sachen módszere különösen fejlett a finn (U. T. Sirelius, K. Vilkuna, N. Valonen, T. Vuorela) és az észt (F. Linnus, G. Ränk, A. Viires) etnográfusok körében. A Wörter und Sachen módszerével dolgozta fel F. Krüger a Pireneusok néprajzát. – Irod. Meringer, R.: Indogermanische Forschungen (Wien, 1906).
+
+``Ohne Sachwissenschaft keine Sprachwissenschaft mehr!'' There is no linguistics anymore without the study of material culture!
+
+Basically, the more opaque a name is in terms of morphological analysis, the longer it is assumed to be present in the language. A basic example would be \textit{York} (monomorphemic) vs. \textit{New York} (analysable), which provides a potential chronology for the concepts the words signify. This approach was incorporated into historical linguistic research and philology, often studied in parallel with findings in archeology. SOURCE??
+
+\textcite[12]{haspelmath_loanwords_2009} also used the term ``analyzability'' in the creation of their loanword database (\gls{WOLD}) as a first step to assess a word's loanword status, although --- to the grief of --- in a purely linguistic way. 
+
+% Contributors were asked to indicate whether the word was (1) unanalyzable (if the form could not be analyzed into two or more constituents); (2) semi-analyzable (if a constituent structure could be identified, but not all constituents had meanings, such as a “cranberry morph”; or if the word was analyzable to linguists but not to lay speakers); (3) analyzable derived; (4) analyzable compound; (5) analyzable phrasal. For analyzable items, contributors were asked to give a morpheme-bymorpheme gloss, i.e. a hyphenation and a gloss in square brackets. For example, for Kanuri shàdàmá ‘witness ’, the field contains the following: “shàdà-má [testimonyowner.of]”. For abbreviations of grammatical categories, contributors were referred to the Leipzig Glossing Rules.
+
+If the word is morphosyntactically complex, ``it was almost certain that it was created by speakers of the language rather than borrowed from some other language'' --- we can read. The authors also state that these are not considered loanwords, even when they contained borrowed elements. 
+
+\subsubsection{Borrowed Word or Native Invention}
+
+Closely related to analyzability, is the question if a term is borrowed or not.
+
+% 5.3. Borrowed Most importantly, of course, contributors were asked to indicate whether, to the best of their knowledge, the word was a loanword, i.e. had been borrowed from another language at some point in the language’s history. Protolanguages were also considered stages of the same language, so that a word borrowed into Proto-Uralic, for example, would count as a loanword in Saami. Five degrees of certainty were distinguished
+
+% I. The Loanword Typology project and the World Loanword Database 13 0. No evidence for borrowing 1. Very little evidence for borrowing 2. Perhaps borrowed 3. Probably borrowed 4. Clearly borrowed A value such as “Clearly not borrowed” or “Clearly inherited” was not used, because any word could have been borrowed at some prehistoric time, so we can never be sure that a word is not an old loanword. And even loanwords can be inherited, e.g. a word borrowed into Proto-Uralic can be inherited by Saami. We define a loanword as a lexeme that has been transferred from one lect into another and is used as a word (rather than as an affix, for example) in the recipient language. Words from a substrate language, too, were considered to be loanwords for the purposes of the LWT project, so we include both adopted and imposed words (see chapter II, §2, §7.4). Lexemes transferred from one regional dialect to another and between an acrolect and a basilect were also treated as loanwords in principle, although in practice they play a minor role. Excluded from the class of loanwords are neologisms (= productively created lexemes) which consist partly or entirely of foreign material, because they are created in the recipient language, and not transferred from a donor language (cf. §5.5.4; but see “calqued” in §5.5.3). 5.4. Age For each word, contributors gave the earliest time at which it was attested or could be reconstructed in the language. For loanwords, this meant the time when the word was borrowed. For nonloanwords, it meant the time of earliest attestation or reconstruction. Dates could be indicated by years (or centuries) or by period name, e.g. “Middle High German”, or “Tang dynasty”, in which case contributors were asked to provide approximate dates for the periods, e.g. 1050–1350 for “Middle High German”, 618–907 for “Tang Dynasty”, and 5000–3000 BCE for “ProtoIndo-European”. Knowing the age of a word is important in this context for several reasons. For nonloanwords which have only existed in the language for a relatively short period, it is not possible to draw conclusions regarding borrowability: they may be replaced by a loanword given sufficient time. On the other hand, a word that has been present in a language for a thousand years without being replaced by a loanword provides good evidence that its meaning is less borrowable. For older loanwords, tracing their origin can be more rewarding since we are less likely to know the history of their borrowing situation compared to newer loanwords. Studying old loanwords can thus help fill important gaps in historical and archeological knowledge. Finally, in a diverse sample such as ours, the history of some languages is relatively well documented for thousands of years, while others have only been re
+
+% 14 Martin Haspelmath and Uri Tadmor corded for less than a century. Naturally, it would be much easier to identify and trace loanwords in languages with well-documented histories. Knowing the age of loanwords thus enables us to make much more nuanced cross-linguistic comparisons.
+
+\subsubsection{Prototype and Distinguishing Words}
+
+
+% underlying mechanism
+
+% onomasiology
+
+\section{The Case of Star Anise}
+\label{sec:case_star_anise}
+
+Let us consider the nomenclature of star anise in the three languages (see \cref{table:names_star_anise}). In English, there is the default \textit{star anise}, which is a native invention, obviously after the fruit's unmistakable appearance. On a rare occasion, we have information on the exact time of star anise's arrival to England, which is dated to 1588, as it was introduced in \cref{sec:star_anise}. The same idea for a name is found in most European languages, either influenced by 16-\nth{17}-century spice dealer terminology, or devised on their own conviction, looking at its recognizable shape. I used the word ``native'', even though the phrase is obviously mixed from an etymological point of view: \textit{anise} is a loanword ultimately from Greek. However, when faced with this type of phrases, I consider that at the time of the contact situation, \textit{anise} was already part of the English lexicon --- as well as \textit{star} --- therefore, this phrase was coined within English, and deemed as a native creation. This practice is consistent with the approach took by the team of \textcite{wold} at \gls{WOLD}. English also has the term \textit{Chinese anise}, which is a phrase consisting of \textit{anise}, again, and \textit{Chinese}, referring to star anise's geographical location and the origin of its procurement for the English. Both phrases utilize the term \textit{anise}, which refers to the small anise seeds of the Mediterranean, used as a spice, and flavouring for liqueurs and confectionary (see \cref{sec:anise}). Why is there a connection to anise? The two plants could not be more different, they are geographically distant, they are botanically unrelated. The only thing that connects them is their highly similar flavor profile, dominated by the volatile oil anethole, the same nauseating and sweet chemical compound that is found in fennel and licorice. And so, for the Europeans who were familiar with anise and its taste, the novel product reminded them of anise's aroma. Hence, the names are in part inspired by taste/plant chemistry, defining anise as a prototype spice and protoype term. To avoid confusion, (the existence of which will be clear to anyone who tries to do a brief search about anise or star anise), distinguishing words are used for the new material. These modifiers are attached to the head word, and in one case inspired by the spice's shape, on the other hand referring to its geopgraphical origin. The existence of a Chinese star anise could be explained by the fact that there is a Japanese star anise as well, a similar looking but poisonous fruit and tree, \taxon{Illicium anisatum}. In short, the two phrases have different ways to identify this spice. English also has a now archaic form referring to star anise: \textit{badian} from French, which arrived via a land route through Persian, perhaps a phonetic loan from Chinese, but there is no documentary evidence for this (see Etymology \ref{ety:badian}).
+
+Arabic \textit{yansūn najmī} [star anise] was devised along similar lines, using a native Arabic word for `star', the prototype word is anise, and the more interesting instances are to be found in neighboring Persian. \textit{Bādyān khatā'ī} or \textit{khatāyī} [star anise] is star anise, while \textit{bādyān rūmī} [Roman anise] is anise.\footcite[vol. 1, p. 197]{hayyim_new_1934} \textit{Bādyān} alone could also refer to fennel.\footcite[140]{steingass_comprehensive_1892} This shows, that in Persian, the prototype word was \textit{bādyān}. 
+
+As for Chinese, we do not find any loanword among the terms used to refer to star anise, all names are local ``inventions''. The modern ``proper name'' for star anise is \textit{bājiǎohuíxiāng} [eight-horn-hui-spice], where [eight-horn] means `octagonal', and [hui-spice] is fennel, therefore it can be translated as `octagonal fennel', or `eight-horned fennel'. An other name, \textit{dàhuíxiāng} `big-fennel' strengthens the assumption that in Chinese, \textit{huíxiāng} `fennel' is the prototype. Again, the flavor profiles of fennel and anise are basically identical, hence the connection (and confusio). The formal Chinese names of star anise are not attested in historical corpora as we discussed in \cref{sec:star_anise}, and I assume that the vernacular name of \textit{bājiǎo} [eight-horn] was first applied to star anise, and the formal name was modelled later driven by the plant sciences. In modern dialects star anise is also referred to as \textit{huíxiāng} `hui-spice' (historically `fennel') and \textit{dàxiāng} `big-spice'. In modern \gls{TCM}, fennel is referred to as \textit{xiǎohuíxiāng} `little-hui-spice', contrasting the two spices that are confounded due to their taste, using size. In fact, the Chinese \tc{大/小} \textit{dà/xiǎ} `greater/lesser' contrast is not necessarily a marker of size, but a semantic tool to convey unmarked/marked, or proper/imitator.
+
+%%%
+% For the use of 大/小  to refer to 
+
+% This is fairly well known but DING Jing's PolyU thesis (and later book published in Springer in 2019(?)) is the most comprehensive semantics of the use of opposites in Mandarin. Not similar 'unmarked' interpretation also show up in English morphosemantics in a different context (e.g. length, width)...Even though 大/小 is typically translated as greater/lesser, it is somewhat misleading. Trandiationally, 大 is use more often, such as in almost all dynastic names,  大秦/大漢/大唐 . These are simply 秦/漢/唐 without 'lesser'-x in contrast. They are simply indicating an unmarked = 'the proper' meaning. 小登科 little_NameAnnounced is not real 登科 NameAnnounced "success in testing to be imperial official", but 'getting married'.  Modern Mandarin rarely uses this contrastive 大 to undeliner (un)markedness but uses 小， e.g. 小東京 小台北 小巨蛋 小聯合國  they typically to 'something that aspires to be x (and is not a real x). And occasionally both terms are used in contrast, such as 
+% 大米 rice 小米 millet; 大年夜 new year's eve 小年夜  the night before new year's eve, 大月氏/小月氏 differentiate the Yuezhi proper (where they have their own kingdom) and 'lesser' (the remaining population that was conquered) 
+%%%
+
+To summarize the points I intended to make above: First, I determined if the words and phrases are analyzable (morphologically, syntactically, semantically), then I examined those names further, while also stating why a specific item is unanalyzable. E.g., \textit{badian} as a loanword does not carry any useful information for an English speaker that is not familiar with the word, it cannot be dissected or interpreted alone. Next, I looked at the borrowed status of the names to determine if the word or phrase is borrowed, or devised locally. E.g., the Chinese names are native ``lexical creations'', while English and Arabic use a non-native headword (\textit{anise/yansūn}) and a native distinguishing word (\textit{star/najmī}). Finally, I have looked at the inspirations behind these lexical inventions, and identified the rationale and motivation behind them. For phrases and compound words, we can separate a prototype word (headword), and a distinguishing word (modifier). In each case, we can discern the reasons why that prototype word was used, what feature of the prototype item (referent) is the most salient. The same is true for the distinguishing word(s). For example, \textit{star anise} is named so after (1) similarity in taste + (2) shape; and \textit{Chinese star anise} is named so after (1) similarity in taste + (2) shape + (3) geographic origin. In \cref{table:analysis_star_anise}, you can see a concise overview of the analysis of star anise terminology.
+
+\begin{table}[!ht]
+    \begin{tabularx}{\textwidth}{@{}llLlll@{}} %@{\,+\,}
+    \toprule
+    \textbf{Term} & \textbf{Gloss} & \textbf{Analyzability} & \textbf{Borrowed} & \textbf{Prototype} & \textbf{Modifier} \\ 
+    \midrule
+    star anise               &                   & analyzable  & native   & similarity in taste & shape  \\
+    badian                   &                   & unanalyzable& borrowed &  &        \\
+    Chinese anise            &                   & analyzable  & native   & similarity in taste & origin \\
+    Chinese star anise       &                   & analyzable  & native   & similarity in taste & shape + origin \\
+    \midrule
+    \textit{yansūn najmī}    & star anise        & analyzable  & native   & similarity in taste & shape  \\
+    \midrule
+    \textit{bājiǎo}          & octagonal         & analyzable  & native   & shape &   \\
+    \textit{bājiǎohuíxiāng}  & octagonal-fennel  & analyzable  & native   & similarity in taste & shape  \\ 
+    \textit{bóhuíxiāng}      & ship-fennel       & analyzable  & native   & similarity in taste & shape  \\ 
+    \textit{dàhuíxiāng}      & big-fennel        & analyzable  & native   & similarity in taste & size*  \\
+    \textit{dàliào}          & big-ingredient    & analyzable  & native   & function & size*  \\
+    \bottomrule
+    \end{tabularx}
+\caption{Cap}
+\label{table:analysis_star_anise}
+\end{table}
+% \multicolumn{1}{c@{\hspace*{\tabcolsep}\makebox[0pt]{+}}}{similarity in taste}
+
+In this sense, the space names are layered. Intuitively, the more layers a spice name has, the more distant the item was culturally, and on the converse, the less components there is to a term, more familiarity with the substance is presumed (e.g., anise vs. star anise in English). Therefore, spice names' modifiers can be categorized according to what salient feature contributed to the naming the most, and in this specific case, it is star anise's distinct shape. As we will later see, shape is just one of many properties that can distinguish/identify a spice, for others, different properties are salient, including color, taste, smell, and the geographical origin we mentioned. Furthermore, these names reflect on the materials' physical qualities, and the perception and importance of a spice for various sensory modalities in the human experience: vision, gustation, olfaction, etc. 
+
+
+
+\subsection{Borrowed}
+
+
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/borrowing.pdf}
+  \caption{}
+  \label{fig:borrowing}
+\end{figure}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/borrowing_compact.pdf}
+  \caption{}
+  \label{fig:borrowing_compact}
+\end{figure}
+
+
+mechanism
+
+
+% The mechanisms of linguistic acculturation can be deducted from linguistic (and historical) analysis. 
+% Is it borrowed or not, and if not, how speakers came up with the name?
+% Spices and their spread are related to trade and cultural interaction 
+% 	language contact
+
+%     Linguistic acculturation “Response in a language to new items that become known through cultural contact. As the speakers of a language in contact with other cultures encounter new cultural items, they may:”
+%     Borrow
+%     Loan, calque (loan translate), learned loan…
+%     Innovate
+%     Compounding, blending, (internal resources)…
+%     Shift
+%     Narrowing, broadening, displacement…
+%     Extend
+%     metonymy (e.g.: octogon  bajiao; pentagon  The Pentagon)
+%     metaphor
+                                                
+%                                                         (Campbell & Mixco, 2007)
+%                               Borrowing
+%                                                         Loanword			anise in English
+%                                                         Loan translation		牙买加胡椒 [Jamaica pepper] in Mandarin; ‘allspice’
+%                                                         Innovation
+%                                                         Compounding		törökbors [Turkish-pepper] in Hungarian; ‘chilli’
+%                                                         Folk-etymology		aniseed; safflower (morphological misinterpretation)
+%                                                         Shift in meaning		
+%                                                         Displacement			pimento in Spanish, replacing pebre ‘pepper’
+%                                                         Extension
+%                                                         Metonymy			bajiao [octagon] in Chinese; star anise
+                                                        
+                                                        
+                                          
+
+
+% Star anise is native to South China and Vietnam, fennel is native from Mediterranean to West Asia until the Himalayas. 
+% Star anise has been used for around 3000 years (in and around the South, only later in the North), no longer found in the wild.
+% The other plants I mentioned are all related to fennel, all are from the Apiaceae, the carrot/celery/parsley family (vt+ coriander 芫荽 and asafoetida 阿魏).
+% They all look similar and are used similarly and named after each other in many languages.
+% All these plants arrived from the west through Central Asia and the Silk Road.
+% This is reflected in some of the names.
+% What’s the connection between anise, star anise and fennel?
+% Anethole – similar flavor profiles because of the same essential oil
+
+% Is the name native or borrowed?
+% The Chinese name is a native Chinese lexical “creation”
+% English and Arabic used a non-native headword (anise, a loanword ultimately from Greek<Egyptian?), and a native distinguishing word (star) 
+
+
+% These names are analyzable. 
+% analysability of words is an idea from the philological movement Wörter und Sachen (words and things), which proposed the close study of etymology of words together with the artifacts/concepts.
+% The more opaque a name is in terms of morphological analysis, the longer it is assumed to be present in the language.
+% E.g.: York (monomorphemic) vs. New York (analysable)  provides a potential chronology
+% Incorporated into historical linguistics ( + archeology)
+
+
+
+
+% Just a quick question:
+% I couldn't not notice that the character used for fennel and anise 茴 huí is made up of the radical for "grass" and 回 huí which is used for Islam and Muslims in Tang dynasty times. My question is: Could this be a construction that would refer to fennel (or anise) as "Muslim grass", "Muslim herb", since the plant came to China from the West originally (East Mediterranean, Middle East), and most likely through Muslim traders of Central Asia?
+% Or this is not how Chinese characters work, and it is just my fantasy running wild and 回 huí is just a sound component...
+
+% Thank you for the answer, I am working on the Tastes of Words article hastily now, I should be done very soon.
+
+
+
+% Yes, good observation!  I suspected so too, but could not find direct supporting evidence yet.
+
+% Good indirect evidences, other than your observation, are 
+% >that 茴 is not found in Shuowenjiezi, which means that it is a later coinage and most likely borrowing; and in this case, 香 standing for herb in a compound and the first character will typically specify its origin (if borrowed), or plant, or sound
+% >the earliest documented usage we can see now of this term is after Tang dynasty (supporting the borrowing hypothesis and consistent with the time of introduction of this herb to China)
+% >The only document I found claims that it is derived from 蘾 from SWJZ characters due to phonological similarity. But this is an apparent 'backformation' speculation as 1) the phonology is distinctive enough (huai2 in Mandardin), and 2) it is a kind of watergrass in SWJZ, and definitely no fennel (and of course we do know now that China did not have fennel during SWJZ time)
+
+
+
+% \section{What's in a name?}
+
+
+
+
+
+
+% \section{Prototype Spices}
+
+% \begin{itemize}
+%     \item cardamom
+%     \item pepper
+% \end{itemize}
+
+
+% cumin
+% anise
+% cinnamon
+% saffron
+
