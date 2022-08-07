@@ -1,6 +1,8 @@
 \chapter{The Names of Spices}
 \label{ch:names}
 
+% \setlength\intextsep{0pt}
+
 % Empirical Chapters
 % Discuss and present your findings in a factual way.
 % What are the results of your investigations?
@@ -8,22 +10,20 @@
 % Was there anything surprising or that didn’t work out as planned?
 % Are there any themes or categories that emerge from the data?
 
-N
 
-\section{Overview}
 
-% \setlength\intextsep{0pt}
-\begin{wrapfigure}{O}{0.33\textwidth}
-  \includegraphics[width=0.33\textwidth]{imgs/plots/languages_pie.pdf}
-\caption[The distribution of spice names across the three languages.]{The distribution of spice names across the three languages.}
-\label{fig:languages_pie}
-\end{wrapfigure}
-% \setlength\intextsep{14pt}
+% \section{Overview}
 
-As a result of the data collection set forth in \cref{ch:data}, the database now contains 369 spice names. Of these, 159 are in English, 88 are in Arabic, and 122 are in Chinese; \cref{fig:languages_pie} shows this distribution.
-The total number is the accumulation of the lengthy process of carefully compiling the nomenclature for the set of spices as defined at the beginning of the thesis, which consists of 25 different spices. The data collection was detailed in \cref{sec:data_collection}, and this chapter aims to showcase the many ways we can interpret, analyze, and visualize the data.
+\lettrine[lines=\iniciale]{\textcolor{\accentcolor}{N}}{ow} that the detailed introduction of the spices is complete, let us look at the the analysis and findings. As a result of the data collection set forth in \cref{ch:data}, the database now contains 369 spice names. Of these, 159 are in English, 88 are in Arabic, and 122 are in Chinese; \cref{fig:languages_pie} shows this distribution. The total number is the accumulation of the lengthy process of carefully compiling the nomenclature for the set of spices as defined at the beginning of the thesis, which consists of 25 different spices. The data collection was detailed in \cref{sec:data_collection}, and this chapter aims to showcase the many ways we can interpret, analyze, and visualize the data.
 
 \subsection{Challenges in Categorization}
+
+\begin{wrapfigure}{O}{0.33\textwidth}
+  \vspace{-16pt}
+  \includegraphics[width=0.33\textwidth]{imgs/plots/languages_pie.pdf}
+  \caption[The distribution of spice names across the three languages.]{The distribution of spice names across the three languages.}
+  \label{fig:languages_pie}
+\end{wrapfigure}
 
 One of the most challenging parts of this project, is to chose a meaningful way to categorize spices and spice names. The design should make sense on multiple dimensions: botanically, historically, and maybe even gastronomically, but at all times keeping in mind the linguistic focus. The main goal is to assign a spice name to the appropriate product/material, which is correctly identified on a botanical level. This is not always straightforward, as some materials can have multiple botanical sources, one plant can yield multiple differently used plant products, and the same names can be used for different substances. We have already discussed the question of spice names vs. plant names in \cref{sec:plant_vs_spice}, but there are are several other issues.
 
@@ -57,6 +57,15 @@ On average, a spice has 14 names, where the max is 44 (chile), the min is 4 (fen
 	\label{fig:ids_top_and_bottom}
 \end{figure}
 
+\begin{figure}[!ht]
+	\centering
+	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_top_pie_ann.pdf}}
+	\hfill
+	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_bottom_pie_ann.pdf}}
+	\caption[]{}
+	\label{fig:ids_top_and_bottom}
+\end{figure}
+
 As we can see, spices that can boast many names include the chili pepper, Sichuan peppers, and false cardamoms. On the other hand, spices with the lowest number of names are presumably the most ``straightforward'' items, take for example cloves, or vanilla.
 
 Now let us look at the same charts deconstructed by language. 
@@ -68,7 +77,12 @@ Now let us look at the same charts deconstructed by language.
 	\label{fig:ids_top_and_bottom}
 \end{figure}
 
-
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/ids_trio_h.pdf}
+	\caption[]{}
+	\label{fig:a}
+\end{figure}
 
 \begin{figure}[!ht]
 	\centering
