@@ -38,5 +38,9 @@
         "Todonotes",
         "unanalyzable",
         "vittae"
-    ]
+    ],    
+    
+    "python.defaultInterpreterPath": "C:\\Users\\parti\\anaconda3\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
 }
