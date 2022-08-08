@@ -10,119 +10,68 @@
 % Was there anything surprising or that didn’t work out as planned?
 % Are there any themes or categories that emerge from the data?
 
+\lettrine[lines=\iniciale]{\textcolor{\accentcolor}{N}}{ow} that the detailed introduction of the spices is complete, let us examine these spice names comparatively as three sets representing the nomenclature in English, Arabic, and Chinese. This chapter constitutes the analysis and findings part of the thesis, and will thematically introduce certain aspects of the terminology of the spice domain, guiding the reader from a general overview towards more nuanced probes that can be derived from the results. The aim of this chapter is to showcase the many ways we can interpret, analyze, and visualize the data.
 
+% I will cover multiple investigations, ranging from the percentage of loanwords, to the use of color-words in the names.
 
-% \section{Overview}
+\section{Overview: Figures and Statistics}
 
-\lettrine[lines=\iniciale]{\textcolor{\accentcolor}{N}}{ow} that the detailed introduction of the spices is complete, let us look at the the analysis and findings. As a result of the data collection set forth in \cref{ch:data}, the database now contains 369 spice names. Of these, 159 are in English, 88 are in Arabic, and 122 are in Chinese; \cref{fig:languages_pie} shows this distribution. The total number is the accumulation of the lengthy process of carefully compiling the nomenclature for the set of spices as defined at the beginning of the thesis, which consists of 25 different spices. The data collection was detailed in \cref{sec:data_collection}, and this chapter aims to showcase the many ways we can interpret, analyze, and visualize the data.
-
-\subsection{Challenges in Categorization}
-
-\begin{wrapfigure}{O}{0.33\textwidth}
-  \vspace{-16pt}
+\begin{wrapfigure}{R}{0.33\textwidth}
+  \vspace{-\baselineskip}
   \includegraphics[width=0.33\textwidth]{imgs/plots/languages_pie.pdf}
-  \caption[The distribution of spice names across the three languages.]{The distribution of spice names across the three languages.}
+  \caption{The distribution of spice names across the three languages.}
   \label{fig:languages_pie}
 \end{wrapfigure}
 
-One of the most challenging parts of this project, is to chose a meaningful way to categorize spices and spice names. The design should make sense on multiple dimensions: botanically, historically, and maybe even gastronomically, but at all times keeping in mind the linguistic focus. The main goal is to assign a spice name to the appropriate product/material, which is correctly identified on a botanical level. This is not always straightforward, as some materials can have multiple botanical sources, one plant can yield multiple differently used plant products, and the same names can be used for different substances. We have already discussed the question of spice names vs. plant names in \cref{sec:plant_vs_spice}, but there are are several other issues.
+As a result of the data collection set forth in \cref{ch:data}, the database now contains 369 spice names. Of these, 159 are in English, 87 are in Arabic, and 123 are in Chinese; \cref{fig:languages_pie} shows this distribution.
+The total number is the accumulation of the lengthy process of carefully compiling the nomenclature for the set of spices as defined at the beginning of the thesis, which consists of 24 different spices. The data collection methods were detailed in \cref{sec:data_collection}. 
 
-One problem arises from the fact that many terms can have a meaning on different levels of specificity, depending on context and intent. Spice words are rich in senses. For example, according to the \gls{PWN} \textit{black pepper} can be both a hypernym and a hyponym to \textit{pepper}, depending on if it refers to the plant, or the dried fruits with the husks on. In this specific case, \textit{black pepper\#2} and \textit{white pepper} are sister terms, but \textit{white pepper} is also a subordinate to \textit{black pepper\#1}. This situation is then further complicated with the fruit of the \textit{Capsicums}, that also have the name \textit{pepper}. Thus, it is not immediately clear if we should treat black and white pepper as two different spices, or two manifestations of the same spice. There are many other examples, where a term can be understood on different levels: as a plant, a family of similar plants, a specific spice, or a group of spices. In an everyday setting, lexical semantic hierarchies are not always adhered to, and people organize spices in their heads according to their own convictions. One author might mention white pepper under the heading black pepper on account of their biology (a botanically driven categorization), while another might separate them and discuss them as different spices based on their different uses (a culinary approach). As for the historian, mentioning white pepper might be just not at all important. The reasons for these variations are usually determined by what is the intention of the categorization, and who is the target behind the treatise. For us layman however, spice entities are most prominently structured by way of their names: the words are the handrails to cling to if we are not familiar with an item.
+On average, a spice has 14 names, where the max is 44 (chile), the min is 4 (fenugreek and mace). \Cref{fig:ids_top_and_bottom_ann} show the top ten and the bottom ten spices that have the most and least number of names including all three languages. This measurement might raise some eyebrows, but in fact it is a very good indicator of which spices are more complex in their nomenclature, and therefore which are the most ``problematic'' to untangle. As we can see, spices that boast with many names include the chili pepper, Sichuan pepper, cassia, false cardamoms, and allspice. These are---not incidentally---the very items that I have dedicated substantially more pages to than some of the other spices, due to issues about their identity or the complexity and richness of their nomenclature. This seems to go hand in hand with matters of biodiversity: chile has countless varieties that have spread to faraway corners of the earth, and now it is a hobby in its own right to cultivate, breed, and crossbreed hot chili pepper cultivars. As we saw, Sichuan peppers species are used across vast regions, and it can cause headache to pin them down exactly, their ``boundaries'' are not that well defined, and it also needed some explanation to isolate the various sources of cassia types.
 
-% If one were to debate whether black pepper and white pepper are the same spice (or the opposite for that matter), we would need some gastronomical knowledge to make some arguments.
+On the other hand, spices with the lowest number of names are presumably the most straightforward items, take for example cloves, or vanilla. But What makes a spice ``straightforward'', or in other words, simple? In my opinion, it is their uniqueness and recognizability. Indeed, if we reflect on our investigation on vanilla in the last section of the previous chapter, we have already established that it is a rather special item: there is no other spice that is made from the fruits of an orchid---it is unique. Or, if we think of cloves, they are unmistakable in their shape and in many language they are known by their shape (see \ref{ety:clove}). These two items are also very well circumscribed in terms of their geographic origins. Although now cultivated in multiple tropical regions, vanilla is known to be from the jungles of Central America and Brazil, there is no doubt about its origins. The native habitat of cloves is even more narrow, as it is only indigenous only to North Maluku and the ``spice islands'' of Makian, Ternate, and Tidore. We see nutmeg and mace as well among the bottom five items with the least amount of names, and we should notice that nutmeg and its mace are also from this region, they were exclusively found on the Banda islands of Maluku, and nowhere else until the second half of the \nth{18} century. Now, it makes a bit more sense to look at these same charts deconstructed by language, this can be seen on \cref{fig:ids_trio}. The most conspicuous feature of these pie charts is that chili has the most names, across every language.
 
-Even more challenging for categorization, is when we are not sure which spices were meant under certain names in different times. Cinnamon and cassia are a great example for this, as we saw in \cref{sec:identity_cinnamon}. But, parallel to the question of identity, we also have seen that it does not always matter. Attitudes differ from place to place: while Europeans do sometimes differentiate, in China and the U.S. the concept of cinnamon is singular. For the analysis, I had to decide if I treat them as one item, or make a distinction. In a few cases, a spice name became obsolete and got ``lost'', meaning that it cannot be identified with certainty, and we have to guess what the name referred to based on botanical and historical data, and categorize accordingly; as it is the case with \textit{amomum}. The most extreme situation is when a spice goes extinct, as it happened to silphium in antiquity. At present, this thesis does not contain such items. In these cases, we need historical knowledge to say anything about the identity of said spices and where they belong in between the others.
-
-Our knowledge or lack thereof also determines the concept we have of a certain item. For example, most people who know that nutmeg and mace come from the same fruit of the same plant and from the same place will always connect the two in their heads, the two spices are literally inseparable (until harvest, of course). From historical records however, it is clear that the knowledge regarding these substances was spiked with misunderstandings and inaccuracies, even among people who were in the spice business. According to an anecdote, during the Dutch monopoly of the Banda islands, an officer back home have written an angry letter to the colony on the Spice islands, ordering them to plant more mace trees, because there was a higher demand for it than nutmeg --- a request that must have raised some eyebrows on the plantations. This shows that botanical organization is accessible to those with botanical knowledge.
-
-Lastly, we must also mention that the language and words we use for these materials also defines our understanding of them. Analyzable, descriptive names help us to identify certain materials, while loanwords with forgotten original meanings (cf. \textit{mace}) might not say much. For example, no Chinese would have the above misconception of mace, when faced with its name: \tc{肉豆蔻皮} \textit{roudoukoupi}, which means the `skin/cover of the nutmeg', which is what it actually is. On the converse, the Chinese initially confused some cardamoms and nutmeg (unrelated plants), simply because they were both round, and sourced from the same region. Today, both are \tc{豆蔻} \textit{doukou}, with modifiers attached to distinguish between them.
-
-Another point to make is the myriad of ``fake'' spices that feature especially in English. False peppers, false cardamoms, bastard cinnamon, and bastard saffron, are a reflection of historical economic attitudes, often pointing at the problem of adulteration. Names, such as \textit{true pepper} and \textit{true cinnamon} summon a sense of originality. This however, is highly subjective to a culture and language, after all, bastard cinnamon is just ``normal'' cinnamon for others, and false cardamoms are just cardamoms to those who have a different prototype for what is a cardamom. In a sense, it all boils down to translation, which can be arbitrary. Who decides if Chinese \tc{桂} \textit{gui} should be rendered \textit{cinnamon} or \textit{cassia} in English? 
-
-To avoid getting lost in the details of lengthy binomial names or botanical genera, I have opted to use a set of common names of the spices to be used for identification, under which the various spice names belong. These IDs are sometimes arbitrary (e.g.: all spicy, red, hot, chili peppers of the \textit{Capsicum} genus and their names go under ``chile''), but always clear cut and explained in the data chapter. I have therefore grouped some spices and spice names into larger categories, trying to find a smallest common denominator within the three languages. This only affects a few items: various false cardamoms in the \textit{Amomum} genus will be grouped under the umbrella term: false cardamom. One better way would have been to divide the categories on a purely botanical basis, but I prefer this solution to make this set of closely related spices more accessible to the reader and avoid these items to fritter away in the crowd. Also, they constitute a linguistics and conceptual category as well, using similar prototype words in all three languages in their names. Using common names as identifiers also facilitates for a linguistically driven comparison, and so the IDs are essentially the same as the set of spices determined earlier: 
-allspice, anise, asafoetida, black cardamom, caraway, cardamom, cassia, chile, cinnamon, clove, coriander, cumin, dill, false cardamom, fennel, fenugreek, ginger, long pepper, nutmeg, pepper, saffron, Sichuan pepper, star anise, turmeric, vanilla.
-
-\section{Stats and Figures: The Spices in Numbers}
-
-\subsubsection{Name Counts}
-
-On average, a spice has 14 names, where the max is 44 (chile), the min is 4 (fenugreek and mace). \Cref{fig:ids_top_and_bottom} show the top ten and the bottom ten spices that have the most and least names, respectively. This is a very good indicator of which spices are more complex in their nomenclature, and therefore which are the most ``problematic'' to untangle.
-
-\begin{figure}[!ht]
-	\centering
-	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_top_pie.pdf}}
-	\hfill
-	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_bottom_pie.pdf}}
-	\caption[]{}
-	\label{fig:ids_top_and_bottom}
-\end{figure}
+% \begin{figure}[!ht]
+% 	\centering
+% 	\subfloat[Top 10]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_top_pie.pdf}}
+% 	\hfill
+% 	\subfloat[Bottom 10]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_bottom_pie.pdf}}
+% 	\caption{}
+% 	\label{fig:ids_top_and_bottom}
+% \end{figure}
 
 \begin{figure}[!ht]
 	\centering
 	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_top_pie_ann.pdf}}
 	\hfill
 	\subfloat[]{\includegraphics[width=0.5\linewidth]{imgs/plots/ids_bottom_pie_ann.pdf}}
-	\caption[]{}
-	\label{fig:ids_top_and_bottom}
+	\caption[Top and bottom spices by number of names.]{Top 10 spices with the most number of names (a), and bottom 10 spices with the least number of names (b).}
+	\label{fig:ids_top_and_bottom_ann}
 \end{figure}
-
-As we can see, spices that can boast many names include the chili pepper, Sichuan peppers, and false cardamoms. On the other hand, spices with the lowest number of names are presumably the most ``straightforward'' items, take for example cloves, or vanilla.
-
-Now let us look at the same charts deconstructed by language. 
 
 \begin{figure}[!ht]
 	\centering
 	\includegraphics[width=\linewidth]{imgs/plots/ids_trio.pdf}
-	\caption[]{}
-	\label{fig:ids_top_and_bottom}
+	\caption[Top spices by number of names, broken down by language.]{Top 5 spices with the most number of names, broken down by language.}
+	\label{fig:ids_trio}
 \end{figure}
 
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=\linewidth]{imgs/plots/ids_trio_h.pdf}
-	\caption[]{}
-	\label{fig:a}
-\end{figure}
-
-\begin{figure}[!ht]
-	\centering
-  \subfloat[]{\includegraphics[width=0.33\linewidth]{imgs/plots/ids_top_en.pdf}}
-	\hfill
-	\subfloat[]{\includegraphics[width=0.33\linewidth]{imgs/plots/ids_top_ar.pdf}}
-	\hfill
-	\subfloat[]{\includegraphics[width=0.33\linewidth]{imgs/plots/ids_top_zh.pdf}}
-	\caption[]{}
-	\label{fig:ids_top_by_language}
-\end{figure}
 
 
 % Trivially, the more similar some spices are, the more confusing their nomenclature will get. The best example for this are the spices from the umbel family: cumin, caraway, anise, fennel, dill, and so on; little seed-like fruits that grow from the Mediterranean to Central Asia. The fascinating connections are most visible when examining them in multiple languages. % EXAMPLES 
 
-
 % According to the \gls{WN}, there are four senses to the noun \textit{pepper}. Two refers to \textit{Capsicums}, and two to ``true peppers''. Pepper\#1 in the plant lexical file, with synonyms of common pepper\#1, black pepper\#1, white pepper\#1, Madagascar pepper\#1, and Piper nigrum\#1 is defined as ``climber having dark red berries (peppercorns) when fully ripe; southern India and Sri Lanka; naturalized in northern Burma and Assam''. Its hyponym is pepper\#3, synonym of peppercorn\#1, with the definition ``pungent seasoning from the berry of the common pepper plant of East India; use whole or ground'', now we are in the food lexical file. This latter, has two hyponyms on its own: black pepper\#2 (``pepper that is ground from whole peppercorns with husks on'') and white pepper\#2 (``pepper ground from husked peppercorns'')
 
-
-% How to accomodate for the confusion in the past, semantic changes kurkum, saffron? They appear twice in both relevant categories! 
-
-
-
-
+% How to accommodate for the confusion in the past, semantic changes kurkum, saffron? They appear twice in both relevant categories! 
 
 \section{The Attestation of Spice Words}
 
-From the nearly 400 names, I have chosen a selected few that --- for lack of a better word --- I marked as ``default''. These are the names most people are familiar with, the most people search by, and the most prevalent in corpora. These are the names that act also as IDs in my dataset. 
+One of the most exciting part of this thesis, is the data that was collected regarding dates of attestation. In other words, I tried to find out the earliest possible mentions for each spice, then combine this information in a way that enables us to see the diffusion of spices throughout the history of a language and culture. This kind of information is a valuable indicator, as it shows the approximate times of the earliest contact with the material. In essence, we can see the history of the spice trade in the words, how and when they arrived, which spices were the earliest to be recorded, and which ones make the latest additions in our vocabularies and spice cabinets. 
 
+From the nearly 400 names, I have chosen a selected few that---for lack of a better word---I marked with ``default''. These are the names most people are familiar with, the most people search by, and the most prevalent in corpora. These are the names that act also as keys in my datasets. For the attestation visualizations, I only used the default terms, and a couple of historic terms precede the contemporary names. This allows for more clean overview, and a way to compare the attestations in the three languages. 
 
+The following plots should give a bird's eye view of the history of the spice domain, and its mark on vocabulary. In \cref{fig:attestation_en,fig:attestation_ar,fig:attestation_zh}, you can see the timeline of the spice nomenclature language by language. Obviously, these figures will show the native spices that are to be found the closest to the homeland of the ancestors of English, Arabic, and Chinese speakers, are recorded first. This means dill and fennel in English, saffron and fenugreek in Arabic, and Sichuan pepper and cassia in Chinese. The figures also show which are the early products of transnational trade, that spread first despite its origins are distant and unknown to the early speakers of the language. These include pepper and ginger. In the final, overlapping plot \cref{set_all}, there is a chance to compare the main attestation periods for these items, followed by a compact version of the same plot (\cref{set_all}) accompanied with a histogram to better see which periods have seen the emergence of new spice words, indicating flourishing (scientific) literature and trade. 
 
-One of the most exciting parts of this thesis, is the data that was collected regarding dates of attestation. In other words, I tried to find out the earliest possible mentions for each spice, then combine this information in a way that enables us to see the diffusion of spices throughout the history of a language and culture. In essence, we could see the history of the spice trade in the words, how and when they arrived, which spice were the earliest recorded, and which ones make the latest additions to in our vocabularies and spice cabinets.
-
-
-
-
-and then have a bird's eye view of  at them altogether, to see how the set of spices spread to the speakers of these languages. In English, I had a relatively easy job, as the \gls{OED} is very rich in etymological information, full of quotations. 
-
-
-compare these dates in the different languages. This kind of information is a valuable indicator, as it shows the approximate times of the earliest 
+% In English, I had a relatively easy job, as the \gls{OED} is very rich in etymological information, full of quotations. 
 
 % CHILI BOOK
 
@@ -130,35 +79,35 @@ compare these dates in the different languages. This kind of information is a va
   \centering
   \includegraphics[width=\linewidth]{imgs/plots/attestation_en.pdf}
   \caption{}
-  \label{fig:set_en}
+  \label{fig:attestation_en}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\linewidth]{imgs/plots/attestation_ar.pdf}
   \caption{}
-  \label{fig:set_ar}
+  \label{fig:attestation_ar}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\linewidth]{imgs/plots/attestation_zh.pdf}
   \caption{}
-  \label{fig:set_zh}
+  \label{fig:attestation_zh}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\linewidth]{imgs/plots/attestation.pdf}
   \caption{}
-  \label{fig:set_all}
+  \label{fig:attestation}
 \end{figure}
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\linewidth]{imgs/plots/attestation_compact.pdf}
   \caption{}
-  \label{fig:set_all}
+  \label{fig:attestation_compact}
 \end{figure}
 
 \section{The Analysis of Spice Nomenclature}
@@ -225,6 +174,8 @@ As for Chinese, we do not find any loanword among the terms used to refer to sta
 
 To summarize the points I intended to make above: First, I determined if the words and phrases are analyzable (morphologically, syntactically, semantically), then I examined those names further, while also stating why a specific item is unanalyzable. E.g., \textit{badian} as a loanword does not carry any useful information for an English speaker that is not familiar with the word, it cannot be dissected or interpreted alone. Next, I looked at the borrowed status of the names to determine if the word or phrase is borrowed, or devised locally. E.g., the Chinese names are native ``lexical creations'', while English and Arabic use a non-native headword (\textit{anise/yansūn}) and a native distinguishing word (\textit{star/najmī}). Finally, I have looked at the inspirations behind these lexical inventions, and identified the rationale and motivation behind them. For phrases and compound words, we can separate a prototype word (headword), and a distinguishing word (modifier). In each case, we can discern the reasons why that prototype word was used, what feature of the prototype item (referent) is the most salient. The same is true for the distinguishing word(s). For example, \textit{star anise} is named so after (1) similarity in taste + (2) shape; and \textit{Chinese star anise} is named so after (1) similarity in taste + (2) shape + (3) geographic origin. In \cref{table:analysis_star_anise}, you can see a concise overview of the analysis of star anise terminology.
 
+\setlength{\tabcolsep}{3pt}
+
 \begin{table}[!ht]
     \begin{tabularx}{\textwidth}{@{}llLlll@{}} %@{\,+\,}
     \toprule
@@ -249,18 +200,18 @@ To summarize the points I intended to make above: First, I determined if the wor
 \end{table}
 % \multicolumn{1}{c@{\hspace*{\tabcolsep}\makebox[0pt]{+}}}{similarity in taste}
 
+\setlength{\tabcolsep}{6pt}
+
 In this sense, the space names are layered. Intuitively, the more layers a spice name has, the more distant the item was culturally, and on the converse, the less components there is to a term, more familiarity with the substance is presumed (e.g., anise vs. star anise in English). Therefore, spice names' modifiers can be categorized according to what salient feature contributed to the naming the most, and in this specific case, it is star anise's distinct shape. As we will later see, shape is just one of many properties that can distinguish/identify a spice, for others, different properties are salient, including color, taste, smell, and the geographical origin we mentioned. Furthermore, these names reflect on the materials' physical qualities, and the perception and importance of a spice for various sensory modalities in the human experience: vision, gustation, olfaction, etc. 
 
 
 
 \subsection{Borrowed}
 
-
-
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=\linewidth]{imgs/plots/borrowing.pdf}
-  \caption{}
+  \caption{Borrowed spice terms across the three languages}
   \label{fig:borrowing}
 \end{figure}
 
@@ -271,8 +222,19 @@ In this sense, the space names are layered. Intuitively, the more layers a spice
   \label{fig:borrowing_compact}
 \end{figure}
 
+\subsection{Donor Languages}
 
-mechanism
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=\linewidth]{imgs/plots/donor_bar.pdf}
+  \caption{}
+  \label{fig:donor_bar}
+\end{figure}
+
+
+
+
+% mechanism
 
 
 % The mechanisms of linguistic acculturation can be deducted from linguistic (and historical) analysis. 

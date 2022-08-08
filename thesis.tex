@@ -30,9 +30,6 @@
 \usepackage{emptypage}
 \usepackage{tocbibind}
 \usepackage{titling}
-\usepackage{wrapfig}
-\usepackage{subfig}
-\usepackage{pdflscape}
 \usepackage{blindtext}
 \usepackage{soul}
 \usepackage[super]{nth}
@@ -40,13 +37,18 @@
 \usepackage[toc,page]{appendix}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{PolyU}{HTML}{8f1329} % This is PolyU red
-\newcommand{\accentcolor}{OliveGreen}
+\definecolor{MidnightBlue}{HTML}{006795} % This is PolyU red
+\newcommand{\accentcolor}{MidnightBlue}
 \newcommand{\signaturesymbol}{◇} %
 
 % % Extend the list of base directories
 % \makeatletter
 % \def\input@path{{imgs/}{imgs/logos/}{utils/}{contents/}{fonts/}}
 % \makeatother
+
+\usepackage{pdflscape}
+\usepackage{subfig}
+\usepackage{wrapfig}
 
 % Tabular environments
 \usepackage{booktabs}
@@ -467,6 +469,7 @@ BoldItalicFont=*-BoldItalic]
 
 % Bibliography information processing
 \usepackage[
+    backend=biber,
     style=apa,
     autocite=inline,
     sorting=nyt,
@@ -476,8 +479,8 @@ BoldItalicFont=*-BoldItalic]
     abbreviate=true,
     block=space,
 ]{biblatex}
-% \AtBeginRefsection{\GenRefcontextData{sorting=ynt}} %error, need biblatex 3.18
-% \AtEveryCite{\localrefcontext[sorting=ynt]} %error, need biblatex 3.18
+% \AtBeginRefsection{\GenRefcontextData{sorting=ynt}}
+% \AtEveryCite{\localrefcontext[sorting=ynt]}
 \renewcommand*{\bibsetup}{%
   \interlinepenalty=10000\relax % default is 5000
   \widowpenalty=10000\relax
@@ -657,7 +660,7 @@ BoldItalicFont=*-BoldItalic]
 \include{contents/1-introduction}
 \include{contents/2-background}
 \include{contents/3-methodology}
-% \include{contents/4-data}
+\include{contents/4-data}
 \include{contents/5-diffusion}
 \include{contents/6-names}
 \include{contents/7-language}
