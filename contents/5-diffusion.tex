@@ -10,13 +10,98 @@
 
 
 
-\lettrine[lines=\iniciale]{\textcolor{\accentcolor}{I}}{n} this chapter, I will present the findings on the diffusion of spices, through the investigation of spice names and their spread on spatial and temporal dimensions. In order to present these results in a convenient, reader friendly way, I will use geospatial mapping. The plots seen in this chapter are made by using the etymological data on spice terminology, collected and introduced in \cref{ch:data}.
+\lettrine[lines=\iniciale]{\textcolor{\accentcolor}{I}}{n} this chapter, I will present the findings on the diffusion of spices, by looking at the distribution of spice plants and their names. First, an overview about the spices geographical distribution will be presented, then, a discussion on their spreadability will ensue. Lastly, I will present my findings on the diffusion of spice names, and how they relate to the botanical reality. The aim of this chapter is to have an understanding of how spices spread through spatial and temporal trajectories, as informed by their names and etymologies, but at the same time supported by the evidences of physical diffusion.
+
+\section{The Geographic Distribution of Spices}
+
+\begin{wrapfigure}{R}{0.33\textwidth}
+    \vspace{-\baselineskip}
+    \includegraphics[width=0.33\textwidth]{imgs/plots/macroarea_pie.pdf}
+    \caption{The distribution of spice plants by the macroarea of their native habitat.}
+    \label{fig:macroarea_pie}
+  \end{wrapfigure}
+  
+In general, it is true that spices come from the hot and humid tropical regions, especially Asia. However, there are number of aromatic plants that originate from more temperate regions, here we should think about the umbelliferous plants of the West and Central Asia: asafoetida, fennel, cumin and caraway, and others, and we must not forget the three American spices: chile, vanilla, and allspice. In the present section, I will outline a brief overview on the distribution of spices, before turning towards a discussion about the spread and \textit{spreadability} of these aromatic plants. \Cref{fig:macroarea_pie} shows the macroareas where the 24 spices originate.
+
+Botanical databases, such as \gls{POWO}, often show distribution and usually give us the regions where a plant is \textit{native} to, and where it has been \textit{introduced}. ``Introduced'' means that the plant is not native in the area, but now grows wild due to human intervention: whether the plant escaped cultivation, or became naturalized after accidental introduction. Looking at this information reflects on the plants' ability to adapt and grow in new places, but also hints on how human usage and transmission affected habitats. I have collected this information and simply counted the native and introduced regions, and added them up. In \cref{fig:total_regions}, you can see the spices ranked by the total number of the regions they grow in, including both native and where the plants were consequently introduced. I would like to highlight that the highest ranks are occupied by aromatic plants that are also herbs, both in the botanical and in the culinary definition. This makes sense, since these plants---e.g., fennel, coriander, dill, fenugreek, etc.---are not only cultivated for their seeds, but the leafy green parts are made use of as well, so it is without question that the whole plant ``travels'' to new places, not only its product. People transplant their ingredients if they can, unless the primary goal of cultivation is profit.\footnote{The Dutch for example actively destroyed plant habitats, and wiped out whole islands---including the population---in the Spice Islands of Indonesia to generate scarcity and ramp up value during their monopol rule in the \nth{17} century.}
+
+% \begin{figure}[!t]
+% 	\centering
+% 	\includegraphics[width=\linewidth]{imgs/plots/total_regions.pdf}
+% 	\includegraphics[width=\linewidth]{imgs/plots/total_regions_by_macroarea.pdf}
+% 	\includegraphics[width=\linewidth]{imgs/plots/total_regions_by_family.pdf}
+% 	\caption{Spices ranked according to the number of regions they grow in, native or introduced, grouped by family.}
+% 	\label{fig:total_regions_by_family}
+% \end{figure}
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/total_regions.pdf}
+	\caption{Spices ranked according to the number of regions they grow in, native or introduced.}
+	\label{fig:total_regions}
+\end{figure}
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/total_regions_by_macroarea.pdf}
+	\caption{Spices ranked according to the number of regions they grow in, native or introduced, grouped by macroarea.}
+	\label{fig:total_regions_by_macroarea}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/total_regions_by_family.pdf}
+	\caption{Spices ranked according to the number of regions they grow in, native or introduced, grouped by family.}
+	\label{fig:total_regions_by_family}
+\end{figure}
+
+The far side of the ranking also shows the spices that do not grow extensively across many regions, regardless of how valuable or popular they are. Of course, behind this, are the complex issues of plant biology, ecology and the many factors that decide a plant's resistance to transplantation and if it can grow in new, alien environments. However, there is another factor here: labour. The lower ranks feature spices that are highly labour intensive to harvest, including star anise, cardamom, and saffron, but the collection of asafoetida is cumbersome as well, and this also effects prices. Interestingly---and of course, connecting to what just said above---all of these are products that are very specific plant parts, the pericarps (star anise, Sichuan pepper), dried oleo-gum-resin, (asafoetida), stigmas (saffron), and dried flower buds (cloves). \Cref{fig:total_regions_by_macroarea} shows the same data, but grouped by macroarea, while \cref{fig:total_regions_by_family} is grouped by plant family.
+
+\section{The Spreadability of Spices}
+
+When it comes to spices of commerce, there is a factor that greatly weighs in on their diffusion: I will this call \textit{spreadability}. I wanted to have a basic understanding of what effect spices' ease or difficulty to spread can have on their diffusion, value, and global popularity, so I created a rudimentary metric based on geographical-botanical data. I have simply divided the sum of the introduced regions with the sum of the native regions to serve as a crude indicator of how ``well'' a spice plant have spread. Intuitively, this index is about spice plants' ability and ``ecological willingness'' to spread to new regions, whether it is a result of human hands (by trade and artificial introduction) or nature (naturalization, spread by birds, etc.) into neighboring areas. 
+
+\[ \frac{\sum region_{introduced}}{\sum region_{native}} = spreadability~index \]
+
+\noindent This metric accounts for the initial difference between a spice if it was minimally distributed (i.e. only found in one or few places), or well distributed before being introduced to either a few, or many new regions. \Cref{fig:spreadability} shows the spices ranked by their spreadability index. For example tumeric, originally from ``one place'', India, is now found in 53 other regions, resulting in a high score of 53. On the far side of the plot, we can find Sichuan pepper, whose main source, \taxon{Zanthoxylum bungeanum} is indigenous to 10 geographical zones in China, but only have been introduced to Uzbekistan, getting a low score of 0.10. 
+
+The results of this plot---like any other---greatly depend on the data we feed to it, and like any other quantitative analysis, has its limitations. Although the regions in the \gls{POWO} database are uniform and follow rough ecological zones, it is not perfect. While some large countries are divided to broad areas that represent different biodiversity zones, the borders are arbitrary. For example, the U.S., Russia, and China are divided by states, provinces, or greater geographical zones (e.g., East European Russia, China South-Central) India is just one unit, explaining the very high score of turmeric.\footnote{Another limitation might be the age of this database as we find zones named Yugoslavia, or Czechoslovakia, but I doubt the biodiversity changed as much as political borders.} Nonetheless, in terms of general usefulness the index has some merit. If we look at the distribution map of turmeric,\footnote{\taxon{Curcuma longa} on \gls{POWO}: \url{https://powo.science.kew.org/taxon/796451-1\#distribution-map}} we will see that it did indeed spread far and wide, from Southeast Asia through West Africa to the Caribbean, and compared with Sichuan pepper,\footnote{\taxon{Zanthoxylum bungeanum} on \gls{POWO}: \url{https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:775625-1\#distribution-map}} which is still mostly limited to China is much more well known globally. \Cref{fig:spreadability_by_macroarea,fig:spreadability_by_family} show the spices ranked by their spreadablity index, but this time broken down by macroarea and plant family. I have included the plant family groupings because it can be very interesting to those with affinity to the plant sciences, but truthfully this would be much more exciting when including more plants in these analyses.
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/spreadability.pdf}
+	\caption{Spices ranked by their spreadability index, showing which spice plants spread to more regions, taking into account the initial state of their distribution. ($ \frac{\sum region_{introduced}}{\sum region_{native}} = spreadability $)}
+	\label{fig:spreadability}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/spreadability_by_macroarea.pdf}
+	\caption{Spices ranked by their spreadability index, grouped by macroarea.}
+	\label{fig:spreadability_by_macroarea}
+\end{figure}
+
+\begin{figure}[!ht]
+	\centering
+	\includegraphics[width=\linewidth]{imgs/plots/spreadability_by_family.pdf}
+	\caption{Spices ranked by their spreadability index, grouped by family.}
+	\label{fig:spreadability_by_family}
+\end{figure}
 
 
 
-Fig X shows the spatial trajectory of all English words included in the set, and we can observe a few trends off glance. First of all, there is a   
+\section{The Linguistic Diffusion of Spices}
 
-PEPPER
+In this section I will illustrate the linguistic diffusion of spices, through the investigation of spice names and their spread on spatial and temporal dimensions. In order to present these results in a convenient, reader friendly way, I will use geospatial mapping. The plots seen in this section are made by using the etymological data on spice terminology, collected and introduced in \cref{ch:data}.
+
+
+
+
+
+
+% Fig X shows the spatial trajectory of all English words included in the set, and we can observe a few trends off glance. First of all, there is a   
+
+% PEPPER
 
 
 % --------------------------------------------
