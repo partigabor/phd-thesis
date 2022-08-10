@@ -41,7 +41,7 @@ Botanical databases, such as \gls{POWO}, often show distribution and  give us th
 
 The far side of the ranking also shows the spices that do not grow extensively across many regions, regardless of how valuable or popular they are. Of course, behind this, are the complex issues of plant biology, ecology and the many factors that decide a plant's resistance to transplantation and if it can grow in new, alien environments. However, there is another point to notice here: labor. The lower ranks feature spices that are highly labor intensive to cultivate and harvest, including star anise, cardamom, and saffron, but the collection of asafoetida is cumbersome as well, and this also effects prices. Interestingly---and of course, closely related what was just said---all of these are products that are very specific plant parts, the pericarps (star anise, Sichuan pepper), dried oleo-gum-resin, (asafoetida), stigmas (saffron), and dried flower buds (cloves). \Cref{fig:total_regions} also shows the same data, but grouped by macroarea and by plant family as well.
 
-Based on my readings and data from the botanical databases, I have tried to approximate the geographical origins of each spice in thesis. In cases, where a spice's supposed native are includes a large number of expansive regions, I have opted for a geo-spatial mid-point as a compromise. Therefore, you can sea caraway placed in the middle of Eurasia, because I used the coordinates for Eurasia, as it it is marked native everywhere in Eurasia. Most spice plants luckily do not have so extensive native areas, and in many cases, the exact origins can be pinpointed: for example, see the case of cinnamon, nutmeg, or cloves. The other side of the globe hides the 3 spices from the Americas.
+Based on my readings and data from the botanical databases, I have tried to approximate the geographical origins of each spice in thesis. \Cref{fig:spices_map} shows this attempt, plotted onto the globe. In cases, where a spice's supposed native are includes a large number of expansive regions, I have opted for a geospatial mid-point as a compromise. Therefore, you can sea caraway placed in the middle of Eurasia, because I used the coordinates for Eurasia, as it it is marked native everywhere in Eurasia. Most spice plants luckily do not have so extensive native areas, and in many cases, the exact origins can be pinpointed: for example, see the case of cinnamon, nutmeg, or cloves neatly situated on tiny islands of the Moluccas in present day Indonesia. The other side of the globe hides the three spices from the Americas.
 
 \begin{figure}[ht!]
     \includegraphics[width=\linewidth]{imgs/plots/spices_map.pdf}
@@ -109,26 +109,106 @@ The results of this plot---like any other---greatly depend on the data we feed t
 
 \section{The Linguistic Diffusion of Spices}
 
-Turning towards the linguistic side of 
-In this section I will illustrate the linguistic diffusion of spices, through the investigation of spice names and their spread on spatial and temporal dimensions. In order to present these results in a convenient, reader friendly way, I will use geospatial mapping. The plots seen in this section are made by using the etymological data on spice terminology, collected and introduced in \cref{ch:data}.
+Finally, turning towards the language element of spice diffusion, I will now illustrate the linguistic diffusion of spices, through the investigation of spice names and their spread on spatial and temporal dimensions. In order to present these results in a convenient, reader friendly, and interesting way, I used geospatial mapping. The plots seen in this section are made possible by utilizing the etymological data on spice terminology, collected and introduced for each spice in \cref{ch:data}, and justified in \cref{sec:collecting_etymologies}.
+
+But before introducing the etymological visualizations, I must touch upon the terms' loanword status. From the 
 
 
+
+
+
+
+
+
+
+\begin{figure}[ht!]
+    \includegraphics[width=\linewidth]{imgs/plots/loanwords_pie.pdf}
+    \caption{}
+    \label{fig:loanwords_pie}
+\end{figure}
+  
+
+
+% \setlength{\tabcolsep}{3pt}
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage[normalem]{ulem}
+% \useunder{\uline}{\ul}{}
+\begin{table}[]
+    \begin{tabular}{@{}rlclclc@{}}
+    \toprule
+    \textbf{\#} & \textbf{English} & \textbf{borr.} & \textbf{Arabic}  & \textbf{borr.} & \textbf{Chinese} & \textbf{borr.} \\ \midrule
+    1           & allspice         & -           & fulful ifranjī   & -           & duōxiāngguǒ      & +           \\
+    2           & anise            & +           & anīsūn           & +           & huíqín           & -           \\
+    3           & asafoetida       & +           & ḥiltīt           & +           & āwèi             & +           \\
+    4           & caraway          & +           & karāwiyā         & +           & gě​lǚ​zi         & +           \\
+    5           & cardamom         & +           & hāl              & +           & dòukòu           & ?           \\
+    6           & cassia           & +           & salīkha          & -           & ròuguì           & -           \\
+    7           & chili            & +           & fulful ḥārr      & -           & làjiāo           & -           \\
+    8           & cinnamon         & +           & qirfa            & -           & xīlánròuguì      & +           \\
+    9           & clove            & +           & qaranful         & +           & dīngxiāng        & -           \\
+    10          & coriander        & +           & kuzbara          & +           & yánsuī           & -           \\
+    11          & cumin            & +           & kammūn           & +           & zīrán            & +           \\
+    12          & dill             & ?           & shibithth        & +           & shíluó           & +           \\
+    13          & fennel           & +           & shamar           & +           & huíxiāng         & -           \\
+    14          & fenugreek        & +           & ḥulba            & -           & húlúbā           & +           \\
+    15          & ginger           & +           & zanjabīl         & +           & jiāng            & -           \\
+    16          & long pepper      & +           & dārfilfil        & +           & bìbō             & +           \\
+    17          & mace             & +           & basbās           & +           & ròudòukòugānpí   & -           \\
+    18          & nutmeg           & +           & jawz al-ṭīb      & +           & ròudòukòu        & -           \\
+    19          & pepper           & +           & fulful           & +           & hújiāo           & -           \\
+    20          & saffron          & +           & zaʿfarān         & +           & fānhónghuā       & -           \\
+    21          & Sichuan pepper   & +           & fulful sītshuwān & -           & huā​jiāo         & -           \\
+    22          & star anise       & -           & yānsūn najmī     & -           & bājiǎohuíxiāng   & -           \\
+    23          & turmeric         & +           & kurkum           & +           & jiānghuáng       & -           \\
+    24          & vanilla          & +           & fānīliyā         & +           & xiāngcǎo         & -           \\ \bottomrule
+    \end{tabular}
+    \end{table}
+
+
+
+
+
+%   \setlength{\tabcolsep}{6pt}
+  
+  
+
+
+
+
+
+
+\subsection{Spices flow into Europe: The Case of English}
+
+\Cref{fig:diffusion_en} shows the diffusion of spice names, when viewed from the words' etymological stages into English. Words that were coined in English (i.e. not loanwords), are not present.  
 
 \begin{figure}[ht!]
     \includegraphics[width=\linewidth]{imgs/plots/diffusion_en.pdf}
-    \caption{}
+    \caption{The diffusion of spice terminology in English, focusing on loanwords and Wanderwörter. For a full interactive version, please visit \url{https://htmlpreview.github.io/?https://github.com/partigabor/phd-thesis-viz/blob/main/diffusion_en.html}}
     \label{fig:diffusion_en}
 \end{figure}
 
+\begin{note}
+    a
+\end{note}
+
+\subsection{Spices through Arabia: The Case of Arabic}
+
+
+
 \begin{figure}[ht!]
     \includegraphics[width=\linewidth]{imgs/plots/diffusion_ar.pdf}
-    \caption{}
+    \caption{The diffusion of spice terminology in Arabic, focusing on loanwords and Wanderwörter. For a full interactive version, please visit \url{https://htmlpreview.github.io/?https://github.com/partigabor/phd-thesis-viz/blob/main/diffusion_ar.html}}
     \label{fig:diffusion_ar}
 \end{figure}
 
+
+\subsection{Spices in the Middle Kingdom: The Case of Chinese }
+
 \begin{figure}[ht!]
     \includegraphics[width=\linewidth]{imgs/plots/diffusion_zh.pdf}
-    \caption{}
+    \caption{The diffusion of spice terminology in Chinese, focusing on loanwords and Wanderwörter. For a full interactive version, please visit \url{https://htmlpreview.github.io/?https://github.com/partigabor/phd-thesis-viz/blob/main/diffusion_zh.html}}
     \label{fig:diffusion_zh}
 \end{figure}
 

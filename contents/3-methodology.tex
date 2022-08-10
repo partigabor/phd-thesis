@@ -70,7 +70,8 @@ To avoid getting lost in the details of lengthy binomial names or botanical gene
 
 The data collection for this project was conducted in three stages. One for assembling the set of spices, one for gathering their names, and one for researching etymologies. The result of these three stages are open for inspection in the electronic files \texttt{spices.csv}, \texttt{names.csv}, and \texttt{etymologies.csv}, available on the corresponding GitHub page. \amarginpar{Where is that?} \Cref{ch:data} will introduce and explain the data in all three levels.
 
-\subsection{Collecting the Spices}
+\subsection{Collecting Spices}
+\label{sec:collecting_spices}
 
 In the first stage, after I have assembled the set of spices, I collected information about them from encyclopedic handbooks written by experts in the plant sciences and spice industry professionals. I have made great use of \textcites{van_wyk_culinary_2014}{peter_handbook_2012}{hu_food_2005} at the start, especially when matching plant products to plants. At this stage, I have focused on the identity and characteristics of spices including geographical distribution and native habitats, especially where I saw any room for confusion. As I collected scientific names, I also recorded the common/vernacular names for each spice as an initial exploration, and I linked them to a botanical database that can supply further information. I have also collected information regarding their basic uses especially in traditional medicine.
 
@@ -86,6 +87,7 @@ Regarding traditional medicine systems, I frequently consulted modern inventorie
 % % https://www.herbarium.gov.hk/en/home/index.html
 
 \subsection{Collecting and Annotating the Names}
+\label{sec:collecting_names}
 
 In the second stage, I have collected the names of spices by combing through the published literature and online databases; whether botanical as described above, historical, or culinary. Always, prioritizing the existing linguistic and philological treatises, of course. I have linked the collected spice names to the respective spices and the result of this is an inventory of nearly 400 spice names that link to the initial set of 24 spices. For each spice, I tried to collect their names in the three languages, and it was also my goal to record where I have found these names. Therefore, thorough citations are available in the dataset pointing towards books, journal articles, databases, dictionaries, or sometimes even Wikipedia. As a preparatory step for the linguistic analysis, I have added some annotations. 
 
@@ -121,8 +123,20 @@ I have also recorded the details concerning attestation where available, noting 
 %Estimation and guesses?
 
 \subsection{Collecting Etymologies}
+\label{sec:collecting_etymologies}
 
-In the third stage, I have collected detailed etymological information on selected names: the terms that were marked as default. Doing so, I now have a parallel set of spice nomenclature of the three languages for 24 spices, and I can compare them in terms of borrowed status, and their etymological development and origins. Here as well, I have included a few other historically relevant terms.
+In the third stage, I have collected detailed etymological information on selected names: the terms that were marked as default, and a few historic and highly relevant alternative names (aliases). Doing so, I now have a parallel set of spice nomenclature of the three languages for 24 spices, and I can compare them in terms of borrowed status, and their etymological development and origins. The etymologies will be discussed in the next chapter in detail, under every spice, and I also highlighted them using dedicated environments called \textit{Etymology boxes} (see for example Etymology \ref{ety:allspice}).
+
+In terms of representation and storage, I deviated from the usual text format, and I have recorded etymological data in a way that it is machine-readable, but still easy to grasp and edit for the human eye as well. I have separated etymological stages, and types of information for each word, creating large spreadsheets that is relatively easily accessible and modifiable for both man and machine. Doing so, I enabled a way to extract only specific information when needed (sources, attestation dates, donor languages, etc.). I also facilitated for geospatial plotting that can be found in \cref{ch:names}, which gives a visual representation of the etymological stages the words have embarked on.
+
+% \subsubsection{The Representation of Etymological Data and its Problems}
+
+% While collecting etymologies, I have spent an obscene amount of time trying to find the best way to store etymological data. I have constantly changed the way I organize the information I have collected and reviewed current efforts on the topic. To my surprise, 
+
+% (1) 
+
+
+
 
 \section{Sources}
 
