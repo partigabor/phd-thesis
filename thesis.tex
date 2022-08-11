@@ -638,10 +638,9 @@ BoldItalicFont=*-BoldItalic]
 % \printunsrtglossary[type=symbols, title={Symbols and Notation}] 
 % \printunsrtglossary[type=primary, title={Primary sources}, style=index]
 
-\cleardoublepage % Works locally, but not on Overleaf!
+\cleardoublepage % Not working on Overleaf!
 \printglossary 
 \printglossary[type=acronym]
-% \printglossary[type=symbols, title={Symbols and Notation}]
 \printunsrtglossary[type=symbols, title={Symbols and Notation}]
 
 % % To compile locally, download the project source code, command in folder: <latexmk> or <lualatex thesis> (assuming you have LaTeX/MiKTeX, https://www.latex-project.org/get/)
@@ -659,10 +658,10 @@ BoldItalicFont=*-BoldItalic]
 % \include{contents/1-introduction}
 % \include{contents/2-background}
 % \include{contents/3-methodology}
-\include{contents/4-data}
+% \include{contents/4-data}
 \include{contents/5-diffusion}
 \include{contents/6-names}
-% \include{contents/7-language}
+\include{contents/7-language}
 % \include{contents/9-conclusion}
 
 \appendix
