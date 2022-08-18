@@ -112,6 +112,7 @@ BoldItalicFont=*-BoldItalic]
 \newfontfamily{\copticfont}[Scale=MatchLowercase]{Noto Sans Coptic}
 \newfontfamily{\cuneifont}{Noto Sans Cuneiform} % Nope on overleaf
 \newfontfamily{\persianfont}[Script=Arabic]{Amiri}
+\newfontfamily{\georgianfont}[Script=Georgian]{Noto Serif Georgian}
 \newfontfamily{\javanesefont}[Script=Javanese]{Noto Sans Javanese}
 \newfontfamily{\linearbfont}{Noto Sans Linear B}
 \newfontfamily{\nastaliqfont}{Noto Nastaliq Urdu}
@@ -152,6 +153,7 @@ BoldItalicFont=*-BoldItalic]
 \newcommand{\hy}[1]{\armenianfont{#1}\rmfamily}
 \newcommand{\jp}[1]{\javanesefont{#1}\rmfamily}
 \newcommand{\jv}[1]{\javanesefont{#1}\rmfamily}
+\newcommand{\ka}[1]{\georgianfont{#1}\rmfamily}
 \newcommand{\ko}[1]{#1}
 \newcommand{\nq}[1]{\nastaliqfont{#1}\rmfamily}
 \newcommand{\osa}[1]{\oldsoutharabianfont{#1}\rmfamily}
@@ -606,17 +608,17 @@ BoldItalicFont=*-BoldItalic]
 
 \frontmatter
 
-% \hypersetup{pageanchor=false}
-% \include{utils/coverpage}
-% \include{utils/typeset}
-% \include{utils/titlepage}
-% \hypersetup{pageanchor=true}
+\hypersetup{pageanchor=false}
+\include{utils/coverpage}
+\include{utils/typeset}
+\include{utils/titlepage}
+\hypersetup{pageanchor=true}
 
-% \include{utils/certificate}
-% \include{utils/dedication}
-% \include{utils/abstract}
-% \include{utils/publications}
-% \include{utils/acknowledgments}
+\include{utils/certificate}
+\include{utils/dedication}
+\include{utils/abstract}
+\include{utils/publications}
+\include{utils/acknowledgments}
 
 % \include{utils/quotes} %%%%%%%%%%%%%%%%
 
@@ -624,13 +626,13 @@ BoldItalicFont=*-BoldItalic]
 \tableofcontents
 \markboth{\contentsname}{\contentsname}
 
-% \cleardoublepage
-% \listoffigures
-% \markboth{\listfigurename}{\listfigurename}
+\cleardoublepage
+\listoffigures
+\markboth{\listfigurename}{\listfigurename}
 
-% \cleardoublepage
-% \listoftables
-% \markboth{\listtablename}{\listtablename}
+\cleardoublepage
+\listoftables
+\markboth{\listtablename}{\listtablename}
 
 % \cleardoublepage
 % \printunsrtglossary[type=main, title={Glossary}]
@@ -638,7 +640,8 @@ BoldItalicFont=*-BoldItalic]
 % \printunsrtglossary[type=symbols, title={Symbols and Notation}] 
 % \printunsrtglossary[type=primary, title={Primary sources}, style=index]
 
-\cleardoublepage % Not working on Overleaf!
+% Not working on Overleaf!
+\cleardoublepage 
 \printglossary 
 \printglossary[type=acronym]
 \printunsrtglossary[type=symbols, title={Symbols and Notation}]
@@ -678,8 +681,8 @@ BoldItalicFont=*-BoldItalic]
 \cleardoublepage
 \printglossary[type=primary, title={Primary Sources}, style=index]
 
-% \cleardoublepage
-% \printbibliography[heading=bibintoc]
+\cleardoublepage
+\printbibliography[heading=bibintoc]
 
 % \cleardoublepage
 % \include{utils/index}
