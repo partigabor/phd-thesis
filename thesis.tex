@@ -30,6 +30,7 @@
 \usepackage{emptypage}
 \usepackage{tocbibind}
 \usepackage{titling}
+\usepackage{titlecaps}
 \usepackage{blindtext}
 \usepackage{soul}
 \usepackage[super]{nth}
@@ -199,11 +200,12 @@ BoldItalicFont=*-BoldItalic]
     \renewcommand{\ShowFrameColor}{\color{black}}
     \renewcommand{\ShowFrameLinethickness}{.5pt}}{}
 
+% Watermark
 \usepackage[
         firstpageonly,%
-        fontsize=0.06\paperwidth,%
+        fontsize=0.07\paperwidth,%
         text={INITIAL SUBMISSION FOR\\[0.5em] EXAMINATION PURPOSE},%
-        colorspec=0.88,%
+        colorspec=0.9,%
     ]{draftwatermark}
 
 % % Noting and drafting packages
@@ -219,78 +221,8 @@ BoldItalicFont=*-BoldItalic]
     \marginpar[\raggedleft\small #1]{\raggedright\footnotesize #1}%
 }
     
-
-
-% Page headers and footers
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\newcommand{\textmark}[2]{\textbf{#1}\quad\color{\accentcolor}#2}%Chapter names in footer
-\renewcommand*{\chaptermark}[1]{\markboth{\textmark{\chaptername\ \thechapter}{#1}}{}}
-\renewcommand*{\sectionmark}[1]{\markright{\textmark{\thesection}{#1}}}
-\fancypagestyle{plain}{%
-    \fancyhf{}%
-    \renewcommand{\headrulewidth}{0pt}%
-    \renewcommand{\footrulewidth}{0pt}%
-    \fancyfootoffset[OR]{1.85cm}%
-    \fancyfoot[OR]{%
-        \ \regularheader{\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}\hspace*{10pt}%Rule
-        \begin{minipage}[b]{1.5cm}%
-            \normalsize\textbf{\thepage}%
-        \end{minipage}%
-    }%
-    \fancyfootoffset[EL]{1.85cm}%
-    \fancyfoot[EL]{%
-        \regularheader%
-        \begin{minipage}[b]{1.5cm}%
-            \raggedleft\normalsize\textbf{\thepage}%
-        \end{minipage}%
-        \hspace*{10pt}{\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}%Rule
-    }%
-}
-\fancypagestyle{main}{%
-    \fancyhf{}%
-    \renewcommand{\headrulewidth}{0pt}%
-    \renewcommand{\footrulewidth}{0pt}%
-    \fancyfootoffset[OR]{1.85cm}%
-    \fancyfoot[OR]{%
-        \ \regularheader\footnotesize\rightmark\hspace*{1pc}{\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}\hspace*{10pt}%Rule
-        \begin{minipage}[b]{1.5cm}%
-            \normalsize\textbf{\thepage}%
-        \end{minipage}%
-    }%
-    \fancyfootoffset[EL]{1.85cm}%
-    \fancyfoot[EL]{%
-        \regularheader\footnotesize%
-        \begin{minipage}[b]{1.5cm}%
-            \raggedleft\normalsize\textbf{\thepage}%
-        \end{minipage}%
-        \hspace*{10pt}{\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}\hspace*{1pc}\leftmark%Rule
-    }%
-}
-\pagestyle{main}
-
-
-
-% Titles and sectioning
-\usepackage[explicit]{titlesec}
-\titleformat{\chapter}[display]%
-    {\normalfont\regularheader}%
-    {\raggedleft\vspace{-\dimexpr\baselineskip+33.48mm\relax}\color{\accentcolor}\rule[-2mm]{2pt}{45.48mm}\quad\fontsize{60}{60}\selectfont\thechapter}%Chapter numeral and line
-    {-12mm}%
-    {\parbox[t]{\dimexpr\textwidth-35mm\relax}{\raggedright\huge#1}}[\phantomsection]
-\titlespacing*{\chapter}{0pt}{0pt}{3em}
-\titleformat{\section}%
-    {\normalfont\regularheader\Large}%
-    {\thesection}%
-    {1pc}%
-    {\color{\accentcolor}#1}[\phantomsection]
-\titleformat{\subsection}% Section head 
-    {\normalfont\regularheader\large}%
-    {\thesubsection}%
-    {1pc}%
-    {\color{\accentcolor}#1}[\phantomsection]% Subsection head
-
-
+% Fancy layout
+\input{utils/layout.tex}
 
 % List of hyphenation exceptions for US English
 % Source: https://ctan.org/tex-archive/info/digests/tugboat/hyphenex
@@ -386,7 +318,7 @@ BoldItalicFont=*-BoldItalic]
 
 
 \usepackage{lettrine}
-\newcommand{\iniciale}{3} % Set the size of initials
+\newcommand{\iniciale}{4} % Set the size of initials
 
 
 
@@ -414,8 +346,8 @@ BoldItalicFont=*-BoldItalic]
 % New commands
 \newcommand{\obs}{\textsuperscript{†}}
 \newcommand{\textss}{\textsuperscript}
-\newcommand\BC{\textsc{bc}}
-\newcommand\AD{\textsc{ad}}
+\newcommand{\BC}{\textsc{bc}}
+\newcommand{\AD}{\textsc{ad}}
 \newcommand{\entry}[2]{(\gls{#1}, ``{#2}'')}
 \newcommand{\textentry}[2]{\gls{#1}, ``{#2}''}
 
@@ -483,20 +415,30 @@ BoldItalicFont=*-BoldItalic]
 ]{biblatex}
 % \AtBeginRefsection{\GenRefcontextData{sorting=ynt}}
 % \AtEveryCite{\localrefcontext[sorting=ynt]}
-\renewcommand*{\bibsetup}{%
-  \interlinepenalty=10000\relax % default is 5000
-  \widowpenalty=10000\relax
-  \clubpenalty=10000\relax
-  \raggedbottom
-  \frenchspacing
-  \biburlsetup}
+
 \DefineBibliographyStrings{american}{
     backrefpage={Cited on p.},
     backrefpages={Cited on pp.}}
+% \defbibheading{bibintoc}[\bibname]{
+%     \chapter*{#1}
+%     \addcontentsline{toc}{chapter}{#1}
+%     \markboth{#1}{#1}}
+
 \defbibheading{bibintoc}[\bibname]{
-    \chapter*{#1}
+    \chapter*{#1\markboth{#1}{#1}}
     \addcontentsline{toc}{chapter}{#1}
-    \markboth{#1}{#1}}
+}
+\apptocmd{\sloppy}{\hbadness 10000\relax}{}{}
+\appto{\bibsetup}{\sloppy}
+
+% \renewcommand*{\bibsetup}{%
+%   \interlinepenalty=10000\relax % default is 5000
+%   \widowpenalty=10000\relax
+%   \clubpenalty=10000\relax
+%   \raggedbottom
+%   \frenchspacing
+%   \biburlsetup}
+
 \addbibresource{thesis.bib} % Add your bibfile here
 \DeclareFieldFormat{apacase}{#1} % Title casing in APA
 % \DeclareFieldFormat{titlecase}{#1}
@@ -615,7 +557,7 @@ BoldItalicFont=*-BoldItalic]
 \hypersetup{pageanchor=true}
 
 \include{utils/certificate}
-\include{utils/dedication}
+% \include{utils/dedication}
 \include{utils/abstract}
 \include{utils/acknowledgments}
 
@@ -662,8 +604,7 @@ BoldItalicFont=*-BoldItalic]
 \include{contents/3-methodology}
 \include{contents/4-data}
 \include{contents/5-diffusion}
-\include{contents/6-names}
-\include{contents/7-language}
+\include{contents/6-language}
 \include{contents/9-conclusion}
 
 \appendix
