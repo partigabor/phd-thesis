@@ -38,7 +38,8 @@
 \usepackage[toc,page]{appendix}
 \usepackage[dvipsnames]{xcolor}
 \definecolor{PolyU}{HTML}{8f1329} % This is PolyU red
-\definecolor{MidnightBlue}{HTML}{006795} % This is PolyU red
+\definecolor{MidnightBlue}{HTML}{006795}
+\definecolor{Orcid}{HTML}{A6CE39}
 \newcommand{\accentcolor}{OliveGreen}
 \newcommand{\signaturesymbol}{◇} %
 
@@ -218,7 +219,7 @@ BoldItalicFont=*-BoldItalic]
 
 % Todonotes slows compilation, use marginpar
 \newcommand{\amarginpar}[1]{% align the marginpar to always rag outside
-    \marginpar[\raggedleft\small #1]{\raggedright\footnotesize #1}%
+    \marginpar[\raggedleft\small #1]{\raggedright\small #1}%
 }
     
 % Fancy layout
@@ -348,6 +349,7 @@ BoldItalicFont=*-BoldItalic]
 \newcommand{\textss}{\textsuperscript}
 \newcommand{\BC}{\textsc{bc}}
 \newcommand{\AD}{\textsc{ad}}
+\newcommand{\BP}{\textsc{bp}}
 \newcommand{\entry}[2]{(\gls{#1}, ``{#2}'')}
 \newcommand{\textentry}[2]{\gls{#1}, ``{#2}''}
 
@@ -527,13 +529,17 @@ BoldItalicFont=*-BoldItalic]
 % \usepackage{silence}
 % \WarningFilter{biblatex}{File 'arabic-apa.lbx'}
 
+% ORCiD
+\usepackage{academicons}
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor{Orcid}{\aiOrcid}}}
+
 % Thesis metadata
 \usepackage[en-US]{datetime2}
 \title{Mapping the Language of Spices}
 \newcommand{\subtitle}{A corpus-based, philological study on the words of the spice domain}
 \author{G{\'{a}}bor Parti}
-\DTMsavedate{ini}{2022-08-01}  % date of creation
-\DTMsavedate{rev}{2022-09-01}  % date of revision
+\DTMsavedate{ini}{2022-08-27}  % date of creation
+\DTMsavedate{rev}{2022-09-27}  % date of revision
 \date{\DTMusedate{ini}}
 \def\degree{Doctor of Philosophy}
 \def\university{The Hong Kong Polytechnic University}
@@ -599,13 +605,13 @@ BoldItalicFont=*-BoldItalic]
 
 % \include{utils/showcase} %%%%%%%%
 
-% \include{contents/1-introduction}
-% \include{contents/2-background}
-% \include{contents/3-methodology}
+\include{contents/1-introduction}
+\include{contents/2-background}
+\include{contents/3-methodology}
 \include{contents/4-data}
-% \include{contents/5-diffusion}
-% \include{contents/6-language}
-% \include{contents/9-conclusion}
+\include{contents/5-diffusion}
+\include{contents/6-language}
+\include{contents/9-conclusion}
 
 \appendix
 
