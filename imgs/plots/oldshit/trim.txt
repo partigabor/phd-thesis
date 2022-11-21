@@ -1,3 +1,0 @@
-Trimming in batch inside a folder with name intact
-magick convert *.png -set filename:base "%[basename]" -trim "%[filename:base].png"
-magick convert *.pdf -set filename:base "%[basename]" -trim "%[filename:base].pdf"
