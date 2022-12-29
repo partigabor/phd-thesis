@@ -72,14 +72,25 @@
 \babelprovide[import=ar, onchar=ids fonts]{arabic}
 \babelprovide[import=he, onchar=ids fonts]{hebrew}
 \babelprovide[import=sa-Deva, onchar=ids fonts]{sanskrit-devanagari}
+% \babelprovide[import=zh-Hans, onchar=ids fonts]{chinese}
+
+% \babelprovide[import, onchar=fonts ids]{japanese}
+% \babelprovide[import, onchar=fonts ids]{korean}
+% \babelprovide[import=zh-hans, onchar=fonts ids]{chinese} % Or zh-hans for Simplified Chinese, zh-hant for traditional
 
 % \babelfont{rm}[Language=Default]{FreeSerif} % Scale=1.0
 % \babelfont{sf}[Language=Default]{Raleway}
 % \babelfont{tt}[Language=Default, Scale=MatchLowercase]{FreeMono}
 
+% \babelfont{rm}{Noto Serif}
+
 \babelfont[*arabic]{rm}[Language=Default]{Noto Naskh Arabic}
 \babelfont[*hebrew]{rm}[Language=Default]{Noto Serif Hebrew}
 \babelfont[*devanagari]{rm}[Renderer=Harfbuzz]{Noto Serif Devanagari}
+
+% \babelfont[chinese]{rm}[Renderer=HarfBuzz]{Noto Serif CJK tc}
+% \babelfont[japanese]{rm}[Renderer=HarfBuzz]{Noto Serif CJK jp}
+% \babelfont[korean]{rm}[Renderer=HarfBuzz]{Noto Serif CJK kr}
 
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures={TeX}}
@@ -99,6 +110,7 @@ UprightFont=*-Roman,
 BoldFont=*-Bold,
 ItalicFont=*-Italic,
 BoldItalicFont=*-BoldItalic]
+
 % \setromanfont{FreeSerif}
 % \setsansfont{FreeSans}
 % \setmonofont{FreeMono}
@@ -124,12 +136,22 @@ BoldItalicFont=*-BoldItalic]
 \newfontfamily{\tamilfont}[Script=Tamil]{Noto Serif Tamil}
 \newfontfamily{\tibetanfont}[Script=Tibetan]{Noto Serif Tibetan}
 \newfontfamily{\thaifont}[Script=Thai]{Noto Serif Thai}
+
+% Can also be solved with kotex and Noto Serif CJK (Static) OTF font collections (https://github.com/googlefonts/noto-cjk/tree/main/Serif/OTC) but not enough memory
+
 \newfontfamily{\tradchinesefont}[
     Path=./fonts/,
     Extension = .otf,
     UprightFont=*-Medium,
     BoldFont=*-Bold
     ]{NotoSerifTC}
+    
+\newfontfamily{\simpchinesefont}[
+    Path=./fonts/,
+    Extension = .otf,
+    UprightFont=*-Medium,
+    BoldFont=*-Bold
+    ]{NotoSerifSC}
     
 % East Asian scripts
 \usepackage{kotex}
@@ -140,6 +162,13 @@ BoldItalicFont=*-BoldItalic]
     UprightFont=*-Medium,
     BoldFont=*-Bold
     ]{NotoSerifKR}
+
+% \setmainhangulfont[
+%     Path=./fonts/,
+%     Extension = .ttc,
+%     UprightFont=*-Medium,
+%     BoldFont=*-Bold
+%     ]{NotoSerifCJK}
 
 % Commands for foreign language words and phrases
 \newcommand{\oo}[1]{\ignorespaces}
@@ -153,21 +182,24 @@ BoldItalicFont=*-BoldItalic]
 \newcommand{\he}[1]{#1}
 \newcommand{\hi}[1]{\devanagarifont{#1}\rmfamily}
 \newcommand{\hy}[1]{\armenianfont{#1}\rmfamily}
-\newcommand{\jp}[1]{\javanesefont{#1}\rmfamily}
+\newcommand{\jp}[1]{#1}
 \newcommand{\jv}[1]{\javanesefont{#1}\rmfamily}
 \newcommand{\ka}[1]{\georgianfont{#1}\rmfamily}
 \newcommand{\ko}[1]{#1}
+\newcommand{\lb}[1]{\linearbfont{#1}\rmfamily}
 \newcommand{\nq}[1]{\nastaliqfont{#1}\rmfamily}
 \newcommand{\osa}[1]{\oldsoutharabianfont{#1}\rmfamily}
 \newcommand{\sa}[1]{\devanagarifont{#1}\rmfamily}
 \newcommand{\sy}[1]{\syriacfont{#1}\rmfamily}
 \newcommand{\ta}[1]{\tamilfont{#1}\rmfamily}
 \newcommand{\tc}[1]{\tradchinesefont{#1}\rmfamily}
+% \newcommand{\tc}[1]{#1}
 \newcommand{\ti}[1]{\tibetanfont{#1}\rmfamily}
 \newcommand{\tha}[1]{\thaifont{#1}\rmfamily}
 \newcommand{\vi}[1]{#1}
-\newcommand{\zh}[1]{#1}
-\newcommand{\lb}[1]{\linearbfont{#1}\rmfamily}
+\newcommand{\zh}[1]{\simpchinesefont{#1}\rmfamily}
+% \newcommand{\zh}[1]{#1}
+
 
 % Cuneiform glyphs
 \newcommand{\GI}{\symbol{"12100}}
