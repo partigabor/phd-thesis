@@ -1,0 +1,4 @@
+{"rule":"SOME_OF_THE","sentence":"^\\QThen, I will try to answer the research questions, revisit the aims stated in the beginning, and mention some of the limitations and future plans.\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QTop 10 spices with the most number of names (a), and bottom 10 spices with the least number of names (b).\\E$"}
+{"rule":"SENTENCE_WHITESPACE","sentence":"^\\QTop 5 spices with the most number of names, by language.\\E$"}
+{"rule":"UPPERCASE_SENTENCE_START","sentence":"^\\Qanalyzability English Arabic Chinese 0 analyzable 111 50 99 1 unanalyzable 39 32 20 2 semi-analyzable 3 4 1 Analyzability of words in the spice name dataset.\\E$"}
