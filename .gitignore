@@ -1,3 +1,8 @@
+## THESIS
+thesis.pdf
+thesis.docx
+thesis.bib
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
@@ -282,7 +287,3 @@ TSWLatexianTemp*
 # Makeindex log files
 *.lpz
 
-# THESIS
-thesis.pdf
-thesis.docx
-thesis.bib
