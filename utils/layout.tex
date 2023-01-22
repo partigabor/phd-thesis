@@ -11,14 +11,13 @@
     \renewcommand{\footrulewidth}{0pt}%
     \fancyfootoffset[OR]{1.85cm}%
     \fancyfoot[OR]{%
-        \ \regularheader{\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}\hspace*{10pt}%Rule
+        \ {\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}\hspace*{10pt}%Rule
         \begin{minipage}[b]{1.5cm}%
             \normalsize\textbf{\thepage}%
         \end{minipage}%
     }%
     \fancyfootoffset[EL]{1.85cm}%
     \fancyfoot[EL]{%
-        \regularheader%
         \begin{minipage}[b]{1.5cm}%
             \raggedleft\normalsize\textbf{\thepage}%
         \end{minipage}%
@@ -31,14 +30,14 @@
     \renewcommand{\footrulewidth}{0pt}%
     \fancyfootoffset[OR]{1.85cm}%
     \fancyfoot[OR]{%
-        \ \regularheader\footnotesize\rightmark\hspace*{1pc}{\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}\hspace*{10pt}%Rule
+        \footnotesize\rightmark\hspace*{1pc}{\color{\accentcolor}\rule[-18.48mm]{1.25pt}{21.98mm}}\hspace*{10pt}%Rule
         \begin{minipage}[b]{1.5cm}%
             \normalsize\textbf{\thepage}%
         \end{minipage}%
     }%
     \fancyfootoffset[EL]{1.85cm}%
     \fancyfoot[EL]{%
-        \regularheader\footnotesize%
+        \footnotesize%
         \begin{minipage}[b]{1.5cm}%
             \raggedleft\normalsize\textbf{\thepage}%
         \end{minipage}%
@@ -51,18 +50,18 @@
 % Titles and sectioning
 \usepackage[explicit]{titlesec}
 \titleformat{\chapter}[display]%
-    {\normalfont\regularheader}%
+    {\normalfont}%
     {\raggedleft\vspace{-\dimexpr\baselineskip+33.48mm\relax}\color{\accentcolor}\rule[-2mm]{2pt}{45.48mm}\quad\fontsize{60}{60}\selectfont\thechapter}%Chapter numeral and line
     {-12mm}%
     {\parbox[t]{\dimexpr\textwidth-35mm\relax}{\raggedright\huge#1}}[\phantomsection]
 \titlespacing*{\chapter}{0pt}{0pt}{3em}
 \titleformat{\section}%
-    {\normalfont\regularheader\Large}%
+    {\normalfont\Large}%
     {\thesection}%
     {1pc}%
     {\color{\accentcolor}#1}[\phantomsection]
 \titleformat{\subsection}% Section head 
-    {\normalfont\regularheader\large}%
+    {\normalfont\large}%
     {\thesubsection}%
     {1pc}%
     {\color{\accentcolor}#1}[\phantomsection]% Subsection head
