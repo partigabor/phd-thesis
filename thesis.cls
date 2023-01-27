@@ -103,12 +103,12 @@ ItalicFont=*-Italic,
 BoldItalicFont=*-BoldItalic]
 % Automatic typesetting of certain writing systems (optional)
 \babelprovide[import=ar, onchar=ids fonts]{arabic}
-% \babelprovide[import=he, onchar=ids fonts]{hebrew}
-% \babelprovide[import=sa-Deva, onchar=ids fonts]{sanskrit-devanagari}
+\babelprovide[import=he, onchar=ids fonts]{hebrew}
+\babelprovide[import=sa-Deva, onchar=ids fonts]{sanskrit-devanagari}
 
 \babelfont[*arabic]{rm}[Language=Default]{Noto Naskh Arabic}
-% \babelfont[*hebrew]{rm}[Language=Default]{Noto Serif Hebrew}
-% \babelfont[*devanagari]{rm}[Renderer=Harfbuzz]{Noto Serif Devanagari}
+\babelfont[*hebrew]{rm}[Language=Default]{Noto Serif Hebrew}
+\babelfont[*devanagari]{rm}[Renderer=Harfbuzz]{Noto Serif Devanagari}
 
 % \babelfont{rm}[Language=Default]{FreeSerif} % Scale=1.0
 % \babelfont{sf}[Language=Default]{FreeSans}
