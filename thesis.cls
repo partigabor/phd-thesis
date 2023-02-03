@@ -55,7 +55,7 @@
 % Colors and symbols
 \definecolor{PolyU}{HTML}{8f1329}
 \definecolor{Orcid}{HTML}{A6CE39}
-\newcommand{\accentcolor}{PolyU}
+\newcommand{\accentcolor}{OliveGreen}
 \newcommand{\signaturesymbol}{⸙}
 
 % Figures
