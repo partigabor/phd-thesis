@@ -228,12 +228,12 @@ BoldItalicFont=*-BoldItalic]
 }
 
 % Watermark
-\usepackage[
-        firstpageonly,%
-        fontsize=0.07\paperwidth,%
-        text={INITIAL SUBMISSION FOR\\[0.5em] EXAMINATION PURPOSE},%
-        colorspec=0.9,%
-    ]{draftwatermark}
+% \usepackage[
+%         firstpageonly,%
+%         fontsize=0.07\paperwidth,%
+%         text={INITIAL SUBMISSION FOR\\[0.5em] EXAMINATION PURPOSE},%
+%         colorspec=0.9,%
+%     ]{draftwatermark}
     
 % Fancy layout
 \input{utils/layout.tex}
