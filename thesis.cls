@@ -19,7 +19,7 @@
 \DeclareOption{initial}{\initialtrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
-\LoadClass[11pt]{book}
+\LoadClass[12pt]{book}
 
 % % Extend the list of base directories (not recommended)
 % \makeatletter
@@ -28,16 +28,22 @@
 
 % General packages
 \usepackage[
-    a4paper,
-    includemp,
-    top=33.48mm,
-    left=25.20mm,
-    right=4.80mm,
-    bottom=33.48mm,
-    marginparwidth=30mm,
-    marginparsep=3mm,
-    footskip=15mm,
+    letterpaper,
+    top=1in,
+    bottom=1in,
+    left=1in,
+    right=1in,
+    % marginparwidth=1in,
+    % marginparsep=1em,
+    % includemp,
+    % showframe,
+    % footskip=15mm,
 ]{geometry}
+
+% \usepackage{layout}
+% \setlength{\oddsidemargin}{36pt}
+% \setlength{\evensidemargin}{36pt}
+
 % \usepackage[a4paper]{geometry}
 \usepackage[en-US]{datetime2}
 \usepackage{hologo} %LaTeX logos
@@ -117,12 +123,18 @@ BoldItalicFont=*-BoldItalic]
 % East Asian scripts
 \usepackage{kotex} % Provides support for KR, JP, TC (not SC).
 % \setmainhangulfont{Noto Serif CJK KR} % Only on Overleaf
-\setmainhangulfont[
-    Path=./fonts/,
-    Extension = .otf,
-    UprightFont=*-Medium,
-    BoldFont=*-Bold
-    ]{NotoSerifKR} % Locally on your machine
+% \setmainhangulfont[
+%     Path=./fonts/,
+%     Extension = .otf,
+%     UprightFont=*-Medium,
+%     BoldFont=*-Bold
+%     ]{NotoSerifKR} % Locally on your machine
+
+% \setmainhangulfont[
+%     Path=./fonts/,
+%     Extension = .ttf,
+%     Ligatures=TeX,
+%     ]{PMingLiU}
 
 % Special fonts (you need them on your computer or the fonts folder):
 \newfontfamily{\ethiopicfont}[Script=Ethiopic]{Noto Serif Ethiopic}
@@ -145,20 +157,30 @@ BoldItalicFont=*-BoldItalic]
 \newfontfamily{\tamilfont}[Script=Tamil]{Noto Serif Tamil}
 \newfontfamily{\thaifont}[Script=Thai]{Noto Serif Thai}
 \newfontfamily{\tibetanfont}[Script=Tibetan]{Noto Serif Tibetan}
-
+% \newfontfamily{\traditionalchinesefont}{PMingLiU}
+% \newfontfamily{\simplifiedchinesefont}{PMingLiU}
 
 \newfontfamily{\traditionalchinesefont}[
     Path=./fonts/,
-    Extension = .otf,
-    UprightFont=*-Medium,
-    BoldFont=*-Bold
-    ]{NotoSerifTC}
+    Extension = .ttf,
+    ]{PMingLiU}
 \newfontfamily{\simplifiedchinesefont}[
     Path=./fonts/,
-    Extension = .otf,
-    UprightFont=*-Medium,
-    BoldFont=*-Bold
-    ]{NotoSerifSC}
+    Extension = .ttf,
+    ]{PMingLiU}
+
+% \newfontfamily{\traditionalchinesefont}[
+%     Path=./fonts/,
+%     Extension = .otf,
+%     UprightFont=*-Medium,
+%     BoldFont=*-Bold
+%     ]{NotoSerifTC}
+% \newfontfamily{\simplifiedchinesefont}[
+%     Path=./fonts/,
+%     Extension = .otf,
+%     UprightFont=*-Medium,
+%     BoldFont=*-Bold
+%     ]{NotoSerifSC}
 
 % Could be solved with kotex and Noto Serif CJK (Static) OTF font collections (https://github.com/googlefonts/noto-cjk/tree/main/Serif/OTC) but not enough memory.
 
@@ -204,28 +226,25 @@ BoldItalicFont=*-BoldItalic]
 \newcommand{\KADAMIJA}{\symbol{"1000F}\symbol{"10005}\symbol{"10016}\symbol{"1000A}}
 \newcommand{\VASE}{\symbol{"100E4}}
 
-% \newfontfamily\garamond{EB Garamond}
-% \AtBeginEnvironment{quote}{\garamond}
-
 % Draft mode
-\usepackage{ifdraft}
-\ifdraft{
-    \usepackage{showframe}
-    \renewcommand{\ShowFrameColor}{\color{black}}
-    \renewcommand{\ShowFrameLinethickness}{.5pt}}{}
+% \usepackage{ifdraft}
+% \ifdraft{
+%     \usepackage{showframe}
+%     \renewcommand{\ShowFrameColor}{\color{black}}
+%     \renewcommand{\ShowFrameLinethickness}{.5pt}}{}
 
 % Notes
-\usepackage[%
-    obeyDraft,
-    english,
-    color=LimeGreen,
-    textsize=scriptsize,
-]{todonotes}
+% \usepackage[%
+%     obeyDraft,
+%     english,
+%     color=LimeGreen,
+%     textsize=scriptsize,
+% ]{todonotes}
 
 % If todonotes slows down compilation, just use marginpar
-\newcommand{\amarginpar}[1]{% align the marginpar to always rag outside
-    \marginpar[\raggedleft\small #1]{\raggedright\small #1}%
-}
+% \newcommand{\amarginpar}[1]{% align the marginpar to always rag outside
+%     \marginpar[\raggedleft\small #1]{\raggedright\small #1}%
+% }
 
 % Watermark
 % \usepackage[
@@ -234,9 +253,53 @@ BoldItalicFont=*-BoldItalic]
 %         text={INITIAL SUBMISSION FOR\\[0.5em] EXAMINATION PURPOSE},%
 %         colorspec=0.9,%
 %     ]{draftwatermark}
-    
+
+
+
+% Letterspacing (track values)
+\usepackage{sectsty}
+\newcommand{\spaced}{\addfontfeatures{LetterSpace=10}}
+\newcommand{\spacedsc}{\scshape\addfontfeatures{LetterSpace=10}}
+
+% Section formatting
+\usepackage{titlesec}
+
+\titleformat{\chapter}[block]{\spaced\MakeUppercase}{\thechapter.}{1em}{\spaced\MakeUppercase}
+\titlespacing*{\chapter}{0em}{1em}{1em}
+
+\titleformat{\section}{\spacedsc}{\thesection}{1em}{}
+\titleformat{\subsection}{\itshape}{\thesection}{1em}{}
+\titleformat{\subsubsection}{\itshape}{\thesection}{1em}{}
+
+
+
 % Fancy layout
-\input{utils/layout.tex}
+% \input{utils/layout.tex}
+\usepackage[]{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[CO]{\spacedsc{parti, ``mapping the language of spices''}}
+\fancyhead[CE]{\spacedsc{sino-platonic papers no. 365}}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot{} % clear all footer fields
+\fancyfoot[CO,CE]{\thepage}
+
+% Footnotes
+% \makeatletter
+% % Default:
+% % \def\@makefnmark{\hbox{\@textsuperscript{\normalfont\@thefnmark}}}
+% \renewcommand{\@makefnmark}{\makebox{{\normalfont\@thefnmark~}}}
+% \makeatother
+
+% No indent in footnote
+% \usepackage[hang,flushmargin]{footmisc}
+
+% \usepackage{scrextend}
+% \deffootnote{0em}{0em}{\thefootnotemark.\enskip}
+
+\usepackage{scrextend}
+% \deffootnote{0em}{0em}{\thefootnotemark.\enskip}
+\deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark.\enskip}}
 
 % List of hyphenation exceptions for US English
 % Source: https://ctan.org/tex-archive/info/digests/tugboat/hyphenex
@@ -292,34 +355,34 @@ BoldItalicFont=*-BoldItalic]
 \tcolorboxenvironment{etymology}{borderline west={4pt}{0pt}{\accentcolor}}
 \tcolorboxenvironment{spice}{borderline west={4pt}{0pt}{\accentcolor}}
 
-% Folio environment
-\newcounter{foliocounter}
-\renewcommand{\thefoliocounter}{\arabic{foliocounter}}
-\newenvironment{folio}[1]
-    {\clearpage
-    \refstepcounter{foliocounter}
-    \noindent\textbf{Folio~\thefoliocounter}
-    \hfill\textbf{#1}\\[-2ex]
-    \noindent{\color{\accentcolor}\rule{\linewidth}{0.25mm}}
-    \begin{center}
-    \vspace{-2ex}
-    }
-    {
-    \end{center}
-    \vspace{-2ex}
-    \noindent{\color{\accentcolor}\rule{\linewidth}{0.25mm}}
-    }
+% % Folio environment
+% \newcounter{foliocounter}
+% \renewcommand{\thefoliocounter}{\arabic{foliocounter}}
+% \newenvironment{folio}[1]
+%     {\clearpage
+%     \refstepcounter{foliocounter}
+%     \noindent\textbf{Folio~\thefoliocounter}
+%     \hfill\textbf{#1}\\[-2ex]
+%     \noindent{\color{\accentcolor}\rule{\linewidth}{0.25mm}}
+%     \begin{center}
+%     \vspace{-2ex}
+%     }
+%     {
+%     \end{center}
+%     \vspace{-2ex}
+%     \noindent{\color{\accentcolor}\rule{\linewidth}{0.25mm}}
+%     }
 
 % Epigraph typesetting
-\usepackage{epigraph}
-\setlength{\epigraphwidth}{.8\textwidth}
-\setlength{\epigraphrule}{0pt}
-\makeatletter
-\let\@oldepitext\@epitext
-\let\@oldepisource\@episource
-\renewcommand{\@epitext}[1]{\@oldepitext{\enquote{\itshape#1}}}
-\renewcommand{\@episource}[1]{\@oldepisource{\textemdash #1}}
-\makeatother
+% \usepackage{epigraph}
+% \setlength{\epigraphwidth}{.8\textwidth}
+% \setlength{\epigraphrule}{0pt}
+% \makeatletter
+% \let\@oldepitext\@epitext
+% \let\@oldepisource\@episource
+% \renewcommand{\@epitext}[1]{\@oldepitext{\enquote{\itshape#1}}}
+% \renewcommand{\@episource}[1]{\@oldepisource{\textemdash #1}}
+% \makeatother
 
 % Cross-referencing and colorization
 \usepackage[final]{hyperref} %[unicode=true]
@@ -328,13 +391,13 @@ BoldItalicFont=*-BoldItalic]
 \hypersetup{
     breaklinks=true,
     colorlinks=true,
-    linkcolor=\accentcolor,
+    linkcolor=black,
     anchorcolor=black,
-    citecolor=\accentcolor,
+    citecolor=black,
     filecolor=black,
     menucolor=black,
     runcolor=pink,
-    urlcolor=black!5!\accentcolor,
+    urlcolor=black,
     linktoc=page}
     
 % Automatic references
@@ -424,8 +487,8 @@ BoldItalicFont=*-BoldItalic]
 % \newcommand{\ill}[1]{\ignorespaces}
 
 % Initial letters
-\usepackage{lettrine}
-\newcommand{\iniciale}{4} % Size in no. of lines
+% \usepackage{lettrine}
+% \newcommand{\iniciale}{4} % Size in no. of lines
 
 % Manipulate wrapfigures (bad)
 % \usepackage{etoolbox}
@@ -450,35 +513,35 @@ BoldItalicFont=*-BoldItalic]
 % Some content
 % \clearpage
 
-% Linguistics
-\usepackage{tipa}
-\usepackage{expex}
-% \lingset{everyglpreamble=, everygla=\it, everyglb=\small, belowglpreambleskip=-0.5ex, aboveglftskip=-0.5ex}
+% % Linguistics
+% \usepackage{tipa}
+% \usepackage{expex}
+% % \lingset{everyglpreamble=, everygla=\it, everyglb=\small, belowglpreambleskip=-0.5ex, aboveglftskip=-0.5ex}
 
-% Linguistic trees
-\usepackage[linguistics, edges]{forest}
-% Easy extra edges
-\forestset{
-  % From an "extra parent" to the node:
-  edge to'/.style 2 args={% #1 = the extra parent, #2 = the edge style
-    tikz+={\path[#2](#1.parent anchor)--(.child anchor);}
-  },
-  % From an "extra parent" to the node 
-  % using the current edge style:
-  % (If the )
-  edge to/.style={% #1 = the extra parent
-    edge to'/.expanded={\unexpanded{#1}}{\forestoption{edge}},
-  },
-  % From the node to an "extra child":
-  edge from'/.style 2 args={% #1 = the extra child, #2 = the edge style
-    tikz+={\path[#2](.parent anchor)--(#1.child anchor);}
-  },
-  % From the node to an "extra child" 
-  % using the current edge style (of the extra child):
-  edge from/.style={% #1 = the extra child
-    edge from'/.process=_O{#1}{#1.edge},
-  },
-}
+% % Linguistic trees
+% \usepackage[linguistics, edges]{forest}
+% % Easy extra edges
+% \forestset{
+%   % From an "extra parent" to the node:
+%   edge to'/.style 2 args={% #1 = the extra parent, #2 = the edge style
+%     tikz+={\path[#2](#1.parent anchor)--(.child anchor);}
+%   },
+%   % From an "extra parent" to the node 
+%   % using the current edge style:
+%   % (If the )
+%   edge to/.style={% #1 = the extra parent
+%     edge to'/.expanded={\unexpanded{#1}}{\forestoption{edge}},
+%   },
+%   % From the node to an "extra child":
+%   edge from'/.style 2 args={% #1 = the extra child, #2 = the edge style
+%     tikz+={\path[#2](.parent anchor)--(#1.child anchor);}
+%   },
+%   % From the node to an "extra child" 
+%   % using the current edge style (of the extra child):
+%   edge from/.style={% #1 = the extra child
+%     edge from'/.process=_O{#1}{#1.edge},
+%   },
+% }
 % The "extra parent/child" may be given as a relative node name. 
 % So in the example below, we could replace
 % "edge to=MG" with "edge to=!uus" (uus=up,up,sibling).
@@ -497,8 +560,8 @@ BoldItalicFont=*-BoldItalic]
 % New commands
 \newcommand{\obs}{\textsuperscript{†}}
 \newcommand{\textss}{\textsuperscript}
-\newcommand{\BC}{\textsc{bc}}
-\newcommand{\AD}{\textsc{ad}}
+\newcommand{\BC}{\spacedsc{bc}}
+\newcommand{\AD}{\spacedsc{ad}}
 \newcommand{\lgS}{\char"017F} % long S
 \newcommand{\lgSS}{\char"017F\char"017F} % double long S
 
@@ -513,12 +576,19 @@ BoldItalicFont=*-BoldItalic]
 \usepackage{academicons}
 \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor{Orcid}{\aiOrcid}}}
 
-% Insert coverpage and titlepage
+% % Insert coverpage and titlepage
+% \renewcommand{\maketitle}{%
+%     \hypersetup{pageanchor=false}%
+%     \include{utils/coverpage}%
+%     \include{utils/typeset}%
+%     \include{utils/titlepage}%
+%     \hypersetup{pageanchor=true}%
+% }
+
+% Insert titlepage
 \renewcommand{\maketitle}{%
     \hypersetup{pageanchor=false}%
-    \include{utils/coverpage}%
-    \include{utils/typeset}%
-    \include{utils/titlepage}%
+    \include{utils/spp}%
     \hypersetup{pageanchor=true}%
 }
 
