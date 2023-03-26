@@ -40,10 +40,6 @@
     % footskip=15mm,
 ]{geometry}
 
-% \usepackage{layout}
-% \setlength{\oddsidemargin}{36pt}
-% \setlength{\evensidemargin}{36pt}
-
 % \usepackage[a4paper]{geometry}
 \usepackage[en-US]{datetime2}
 \usepackage{hologo} %LaTeX logos
@@ -84,6 +80,9 @@
 \usepackage[labelsep=quad]{caption}
 \captionsetup[figure]{position=below}
 \captionsetup[table]{position=above}
+\captionsetup[figure]{margin={1in,1in},labelfont=bf}
+\captionsetup[subfigure]{margin={0in,0in}}
+\captionsetup[table]{labelfont=bf}
 
 % Languages, scripts & fonts
 \usepackage[american, bidi=basic]{babel}
@@ -112,7 +111,7 @@ BoldItalicFont=*-BoldItalic]
 \babelprovide[import=he, onchar=ids fonts]{hebrew}
 \babelprovide[import=sa-Deva, onchar=ids fonts]{sanskrit-devanagari}
 
-\babelfont[*arabic]{rm}[Language=Default]{Noto Naskh Arabic}
+\babelfont[*arabic]{rm}[Language=Default]{Amiri} %{Noto Naskh Arabic}
 \babelfont[*hebrew]{rm}[Language=Default]{Noto Serif Hebrew}
 \babelfont[*devanagari]{rm}[Renderer=Harfbuzz]{Noto Serif Devanagari}
 
@@ -138,7 +137,7 @@ BoldItalicFont=*-BoldItalic]
 
 % Special fonts (you need them on your computer or the fonts folder):
 \newfontfamily{\ethiopicfont}[Script=Ethiopic]{Noto Serif Ethiopic}
-\newfontfamily{\arabicfont}[Script=Arabic]{Noto Naskh Arabic}
+\newfontfamily{\arabicfont}[Script=Arabic]{Amiri} %Noto Naskh Arabic
 \newfontfamily{\armenianfont}{Noto Serif Armenian}
 \newfontfamily{\brahmifont}{Noto Sans Brahmi} % Nope on overleaf
 \newfontfamily{\copticfont}[Scale=MatchLowercase]{Noto Sans Coptic}
@@ -264,14 +263,15 @@ BoldItalicFont=*-BoldItalic]
 % Section formatting
 \usepackage{titlesec}
 
-\titleformat{\chapter}[block]{\spaced\MakeUppercase}{\thechapter.}{1em}{\spaced\MakeUppercase}
-\titlespacing*{\chapter}{0em}{1em}{1em}
+\titleformat{\chapter}{\spacedsc}{\thechapter.}{1em}{}
+% {\spaced\MakeUppercase}
+% \titlespacing*{\chapter}{0em}{1em}{1em}
 
 \titleformat{\section}{\spacedsc}{\thesection}{1em}{}
-\titleformat{\subsection}{\itshape}{\thesection}{1em}{}
-\titleformat{\subsubsection}{\itshape}{\thesection}{1em}{}
+\titleformat{\subsection}{\itshape}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\itshape}{\thesubsubsection}{1em}{}
 
-
+\setlength{\headheight}{14.5pt}
 
 % Fancy layout
 % \input{utils/layout.tex}
@@ -292,14 +292,9 @@ BoldItalicFont=*-BoldItalic]
 % \makeatother
 
 % No indent in footnote
-% \usepackage[hang,flushmargin]{footmisc}
-
-% \usepackage{scrextend}
-% \deffootnote{0em}{0em}{\thefootnotemark.\enskip}
-
 \usepackage{scrextend}
 % \deffootnote{0em}{0em}{\thefootnotemark.\enskip}
-\deffootnote{1.5em}{1em}{\makebox[1.5em][l]{\thefootnotemark.\enskip}}
+\deffootnote{1.5em}{1em}{\thefootnotemark.\enskip}
 
 % List of hyphenation exceptions for US English
 % Source: https://ctan.org/tex-archive/info/digests/tugboat/hyphenex
@@ -514,7 +509,7 @@ BoldItalicFont=*-BoldItalic]
 % \clearpage
 
 % % Linguistics
-% \usepackage{tipa}
+\usepackage{tipa}
 % \usepackage{expex}
 % % \lingset{everyglpreamble=, everygla=\it, everyglb=\small, belowglpreambleskip=-0.5ex, aboveglftskip=-0.5ex}
 
@@ -560,8 +555,8 @@ BoldItalicFont=*-BoldItalic]
 % New commands
 \newcommand{\obs}{\textsuperscript{†}}
 \newcommand{\textss}{\textsuperscript}
-\newcommand{\BC}{\spacedsc{bc}}
-\newcommand{\AD}{\spacedsc{ad}}
+\newcommand{\BC}{\spacedsc{bc}\normalfont}
+\newcommand{\AD}{\spacedsc{ad}\normalfont}
 \newcommand{\lgS}{\char"017F} % long S
 \newcommand{\lgSS}{\char"017F\char"017F} % double long S
 

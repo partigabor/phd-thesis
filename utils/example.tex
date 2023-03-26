@@ -25,6 +25,7 @@ Normal, \textit{italic}, \textbf{bold}, \textbf{\textit{bold-italic}}, UPPERCASE
 Ligatures --- Common: ff, fi, and ffi; Rare: st, ct, is.
 
 \begin{table}[ht]
+    \caption{Different font styles and typefaces.}
 \begin{tabular}{@{}lll@{}}
 \toprule
 Normal      & Sphinx of black quartz, judge my missing vow forever. \\
@@ -37,7 +38,6 @@ Superscript & \textss{Sphinx of black quartz, judge my missing vow forever.} \\
 Sans serif  & \textsf{Sphinx of black quartz, judge my missing vow forever.} \\
 Mono        & \texttt{Sphinx of black quartz, judge my missing vow forever.} \\ \bottomrule
 \end{tabular}
-\caption{Different font styles and typefaces.}
 \end{table}
 
 \noindent{\color{black}\rule{0.25\linewidth}{0.2mm}} this is baseline
@@ -264,6 +264,7 @@ This line has a reference for Etymology \ref{etym:pepper} and a `clever referenc
 \setlength{\tabcolsep}{3pt} % Change separator length
 
 \begin{table}[ht]
+    \caption[An elaborate table]{The set of 24 spices included in this thesis, with scientific names of the source plant, names in English, Chinese, Arabic, and their transliterations.}
 % \begin{adjustbox}{max width=\textwidth}
 \begin{tabularx}{\textwidth}{@{}r>{\footnotesize}llll@{}rl@{}}
 \toprule
@@ -303,7 +304,6 @@ This line has a reference for Etymology \ref{etym:pepper} and a `clever referenc
 \bottomrule
 \end{tabularx}
 % \end{adjustbox}
-\caption[An elaborate table]{The set of 24 spices included in this thesis, with scientific names of the source plant, names in English, Chinese, Arabic, and their transliterations.}
 \label{table:set}
 \end{table}
 

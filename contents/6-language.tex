@@ -68,19 +68,19 @@ So what kind of spice names there are? How does a typical spice name looks like?
 Analyzability of words is originally an idea from the twentieth-century philological movement and method \textit{Wörter und Sachen} (words and things in German), which had a big influence on linguistics and ethnography. Outlined by Hugo Schuchardt and based on the titular journal \textit{Wörter und Sachen} started by Indo-Europeanist Rudolf Meringer in 1909, it proposed the close study of the etymology of words together with the artifacts/concepts \autocite{ortutay_magyar_1977}. Meringer wrote in 1906: ``Ohne Sachwissenschaft keine Sprachwissenschaft mehr!'' (There is no more linguistics without the study of material culture!). Practically speaking, analyzability meant that the more opaque a name is in terms of morphological analysis, the longer it is assumed to be present in the language. A basic example would be \textit{York} (monomorphemic) vs. \textit{New York} (analyzable), which provides a potential chronology for the concepts the words signify. This approach was incorporated into historical linguistic research and philology, often studied in parallel with findings in archeology \autocite{ortutay_magyar_1977}.
 
 \begin{table}
-  \centering
-  \begin{tabular}{@{}llrrr@{}}
-  \toprule
-  \textbf{\#} & \textbf{analyzability} & \textbf{English} & \textbf{Arabic} & \textbf{Chinese} \\ \midrule
-  0           & analyzable             & 111              & 50              & 99              \\
-  1           & unanalyzable           & 39               & 32              & 20               \\
-  2           & semi-analyzable        & 3                & 4               & 1                \\ \bottomrule
-  \end{tabular}
-  \caption{Analyzability of words in the spice name dataset.}
-  \label{table:analyzability}
-  \end{table}
+\caption{Analyzability of words in the spice name dataset.}
+\centering
+\begin{tabular}{@{}llrrr@{}}
+\toprule
+\textbf{\#} & \textbf{analyzability} & \textbf{English} & \textbf{Arabic} & \textbf{Chinese} \\ \midrule
+0           & analyzable             & 111              & 50              & 99              \\
+1           & unanalyzable           & 39               & 32              & 20               \\
+2           & semi-analyzable        & 3                & 4               & 1                \\ \bottomrule
+\end{tabular}
+\label{table:analyzability}
+\end{table}
 
-\textcite[12]{haspelmath_loanwords_2009} also used the term ``analyzability'' in the creation of their loanword database (\gls{WOLD}) as a first step to assess a word's loanword status, although in a purely linguistic way. I have applied a simplified version of this annotation, and indicated if a word was (1) unanalyzable, (2) semi-analyzable, (3) or analyzable. Items are semi-analyzable if the situation is morphosyntactically complex. For example in case of ``cranberry words'' such as \textit{fenugreek}, where an English speaker could decipher the element \textit{Greek}, but would be left in the dark with \textit{fenu-}, or the Arabicized loanwords from Persian, \textit{dārṣīnī} `cinnamon' or \textit{dārfilfil} `long pepper', where both \textit{ṣīnī} `Chinese' and \textit{filfil} `pepper' would be understood, but Arabic speakers would not know what to do with \textit{dār} (which coincidentally means `house' in Arabic, but it is from Persian `wood'). A Chinese example could be \textit{huluba} `fenugreek', where \textit{hu} `barbarian' is the same character that is found in \textit{hujiao} `black pepper', pointing to its foreign origins, but the whole word itself would be difficult to decode since it is in part a phono-semantic matching or Arabic \textit{ḥulba} `fenugreek'. Sometimes the Chinese term uses the first character \traditionalchinesefont{葫}, which is a phono-semantic compound of \textit{hu} `barbarian' (after its sound value) and \textit{cao} `herb' for its meaning, making the loanword origin more obvious. 
+\textcite[12]{haspelmath_loanwords_2009} also used the term ``analyzability'' in the creation of their loanword database (\gls{WOLD}) as a first step to assess a word's loanword status, although in a purely linguistic way. I have applied a simplified version of this annotation, and indicated if a word was (1) unanalyzable, (2) semi-analyzable, (3) or analyzable. Items are semi-analyzable if the situation is morphosyntactically complex. For example in case of ``cranberry words'' such as \textit{fenugreek}, where an English speaker could decipher the element \textit{Greek}, but would be left in the dark with \textit{fenu-}, or the Arabicized loanwords from Persian, \textit{dārṣīnī} `cinnamon' or \textit{dārfilfil} `long pepper', where both \textit{ṣīnī} `Chinese' and \textit{filfil} `pepper' would be understood, but Arabic speakers would not know what to do with \textit{dār} (which coincidentally means `house' in Arabic, but it is from Persian `wood'). A Chinese example could be \textit{huluba} `fenugreek', where \textit{hu} `barbarian' is the same character that is found in \textit{hujiao} `black pepper', pointing to its foreign origins, but the whole word itself would be difficult to decode since it is in part a phono-semantic matching or Arabic \textit{ḥulba} `fenugreek'. Sometimes the Chinese term uses the first character \tc{葫}, which is a phono-semantic compound of \textit{hu} `barbarian' (after its sound value) and \textit{cao} `herb' for its meaning, making the loanword origin more obvious. 
 
 Analyzability of words greatly interlinks with their structure, which can be simple or monomorphemic (e.g.,\textit{hing}), compound (e.g., \textit{stinking gum}), or phrasal (e.g., \textit{devil's dung}). \textit{Asafoetida} would be considered a compound to those only who are familiar with either Latin, or the history and meaning of this word. Even if we are, \textit{asa} is a cranberry morpheme, and \textit{foetida} `fetid' might not be immediately obvious, so it is a semi-analyzable compound. 
 
@@ -203,25 +203,25 @@ To summarize the points I intended to make above: First, I determined if the wor
 \setlength{\tabcolsep}{3pt}
 
 \begin{table}[!ht]
-    \begin{tabularx}{\textwidth}{@{}llLlll@{}} %@{\,+\,}
-    \toprule
-    \textbf{Term} & \textbf{Gloss} & \textbf{Analyzability} & \textbf{Borrowed} & \textbf{Prototype} & \textbf{Modifier} \\ 
-    \midrule
-    star anise               &                   & analyzable  & native   & similarity in taste & shape  \\
-    badian                   &                   & unanalyzable& borrowed &  &        \\
-    Chinese anise            &                   & analyzable  & native   & similarity in taste & origin \\
-    Chinese star anise       &                   & analyzable  & native   & similarity in taste & shape + origin \\
-    \midrule
-    \textit{yansūn najmī}    & star anise        & analyzable  & native   & similarity in taste & shape  \\
-    \midrule
-    \textit{bājiǎo}          & octagonal         & analyzable  & native   & shape &   \\
-    \textit{bājiǎohuíxiāng}  & octagonal-fennel  & analyzable  & native   & similarity in taste & shape  \\ 
-    \textit{bóhuíxiāng}      & ship-fennel       & analyzable  & native   & similarity in taste & shape  \\ 
-    \textit{dàhuíxiāng}      & big-fennel        & analyzable  & native   & similarity in taste & size*  \\
-    \textit{dàliào}          & big-ingredient    & analyzable  & native   & function & size*  \\
-    \bottomrule
-    \end{tabularx}
 \caption{Comparative analysis of the names of star anise in English, Arabic, and Chinese.}
+\begin{tabularx}{\textwidth}{@{}llLlll@{}} %@{\,+\,}
+\toprule
+\textbf{Term} & \textbf{Gloss} & \textbf{Analyzability} & \textbf{Borrowed} & \textbf{Prototype} & \textbf{Modifier} \\ 
+\midrule
+star anise               &                   & analyzable  & native   & similarity in taste & shape  \\
+badian                   &                   & unanalyzable& borrowed &  &        \\
+Chinese anise            &                   & analyzable  & native   & similarity in taste & origin \\
+Chinese star anise       &                   & analyzable  & native   & similarity in taste & shape + origin \\
+\midrule
+\textit{yansūn najmī}    & star anise        & analyzable  & native   & similarity in taste & shape  \\
+\midrule
+\textit{bājiǎo}          & octagonal         & analyzable  & native   & shape &   \\
+\textit{bājiǎohuíxiāng}  & octagonal-fennel  & analyzable  & native   & similarity in taste & shape  \\ 
+\textit{bóhuíxiāng}      & ship-fennel       & analyzable  & native   & similarity in taste & shape  \\ 
+\textit{dàhuíxiāng}      & big-fennel        & analyzable  & native   & similarity in taste & size*  \\
+\textit{dàliào}          & big-ingredient    & analyzable  & native   & function & size*  \\
+\bottomrule
+\end{tabularx}
 \label{table:analysis_star_anise}
 \end{table}
 % \multicolumn{1}{c@{\hspace*{\tabcolsep}\makebox[0pt]{+}}}{similarity in taste}
