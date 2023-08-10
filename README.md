@@ -1,8 +1,8 @@
 # Ph.D. thesis of Gábor Parti
 
-**⚓ This project is still under review and revision, all content here is tentative! ⚓**
+**⚓ This project is finished, the final thesis is accessible here [https://theses.lib.polyu.edu.hk/handle/200/12389](https://theses.lib.polyu.edu.hk/handle/200/12389):  ⚓**
 
-LaTeX source files of the Ph.D. thesis prepared at The Hong Kong Polytechnic University during 2022. Estimated time of publication, early 2023.
+LaTeX source files of the Ph.D. thesis prepared at The Hong Kong Polytechnic University between 2019-2023.
 
 The repository has two branches: `initial-submission` and `revision`.
 
