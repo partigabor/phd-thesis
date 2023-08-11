@@ -1,0 +1,128 @@
+%% This is thesis.tex, the main TeX-file of the Ph.D. thesis  of Gábor Parti.
+%% The base LaTeX template was originally created by Tom M. Ragonneau (https://github.com/ragonneau/phd-thesis-template),
+%% and subsequently modified by Gábor Parti (https://github.com/partigabor/phd-thesis-template). This version is tailored for multi-script documents, and uses LuaLaTeX.
+%% It aims to follow the requirements of The Hong Kong Polytechnic University,
+%% and features tools and functions, such as linguistic trees, examples, and IPA typing, for linguistics-oriented works.
+%%
+%% It may be distributed and/or modified under the conditions of the
+%% LaTeX Project Public License, either version 1.3 of this license or
+%% (at your option) any later version. The latest version of this
+%% license is in http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%% This work has the LPPL maintenance status 'maintained'.
+%% The Current Maintainer of this work is Gábor Parti.
+
+\documentclass{thesis} % In draft, initial, or final modes
+\usepackage[final]{microtype}
+
+% Bibliographical resources
+\addbibresource{thesis.bib}
+
+% Thesis metadata
+\title{Mapping the Language of Spices}
+\newcommand{\subtitle}{A corpus-based, philological study on the words of the spice domain}
+\author{G{\'{a}}bor Parti}
+\DTMsavedate{ini}{2022-08-27}  % date of creation
+\DTMsavedate{rev}{2023-02-27}  % date of revision
+\date{\DTMusedate{ini}}
+\def\degree{PhD}
+\def\university{The Hong Kong Polytechnic University}
+\def\department{Department of Chinese and Bilingual Studies}
+
+\begin{document}
+
+\frontmatter
+
+\maketitle
+
+\include{utils/certificate}
+\include{utils/dedication}
+\include{utils/abstract}
+\include{utils/acknowledgments}
+
+% \cleardoublepage
+% \tableofcontents
+
+% \cleardoublepage
+% \listoffigures
+
+% \cleardoublepage
+% \listoftables
+
+\cleardoublepage
+\tableofcontents
+\markboth{\contentsname}{\contentsname}
+
+\cleardoublepage
+\listoffigures
+\markboth{\listfigurename}{\listfigurename}
+
+\cleardoublepage
+\listoftables
+\markboth{\listtablename}{\listtablename}
+
+\cleardoublepage 
+\printglossary[type=main]
+
+\cleardoublepage
+\printglossary[type=acronym]
+
+\cleardoublepage
+\printunsrtglossary[type=symbols, title={Symbols and Notation}]
+
+% \cleardoublepage
+% \printunsrtglossary[type=main, title={Glossary}]
+
+% \cleardoublepage
+% \printunsrtglossary[type=acronym, title={Acronyms}]
+
+% \cleardoublepage
+% \printunsrtglossary[type=symbols, title={Symbols and Notation}] 
+
+% \cleardoublepage
+% \printunsrtglossary[type=primary, title={Primary sources}, style=index]
+
+\ifdraft{
+    \cleardoublepage
+    \phantomsection
+    \todototoc
+    \listoftodos}{}
+
+\mainmatter
+
+% \include{utils/example}
+
+\include{contents/1-introduction}
+\include{contents/2-background}
+\include{contents/3-methodology}
+\include{contents/4-data}
+\include{contents/5-diffusion}
+\include{contents/6-language}
+\include{contents/7-conclusion}
+
+% \appendix
+
+% \cleardoublepage
+% \include{contents/appendix}
+
+% \cleardoublepage
+% \include{contents/folios}
+
+% \cleardoublepage
+% \include{contents/kohler}
+
+\cleardoublepage
+\printglossary[type=primary, title={Primary Sources}, style=index]
+
+\cleardoublepage
+\printbibliography[heading=bibintoc]
+
+% \cleardoublepage
+% \include{utils/index}
+
+\end{document}
+
+\usepackage{anyfontsize}
+
+% To compile locally, download the project source code, command in folder: <latexmk> or <lualatex thesis> (assuming you have LaTeX/MiKTeX, https://www.latex-project.org/get/)
