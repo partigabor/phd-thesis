@@ -4,6 +4,6 @@
 
 LaTeX source files of the Ph.D. thesis prepared at The Hong Kong Polytechnic University between 2019-2023, defended on January 12, 2023.
 
-The repository has two branches: `initial-submission`, `revision`, and `spp`; the latter is being prepared for publication in [Sino-Platonic Papers](https://sino-platonic.org/).
+The repository has three branches: `initial-submission`, `revision`, and `spp`; the latter is being prepared for publication in [Sino-Platonic Papers](https://sino-platonic.org/). Cinsider the revised version (`revision`) for your reference.
 
 Open/download via `thesis.pdf` in either repository, or compile yourself with LuaLaTeX.
